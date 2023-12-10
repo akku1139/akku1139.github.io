@@ -1,0 +1,41 @@
+---
+const sitename:string = "akku's website";
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+import '@/styles/main.css';
+import HeaderLink from '@/components/Header/Link.astro';
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title} - {sitename}</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+  </head>
+  <body>
+    <header>
+      <span style="
+        font-weight: bold;
+        font-size: 130%;
+        margin-right: auto;
+      ">
+        <a href="/" style="
+          color: var(--text-color);
+          text-decoration:none;
+        ">{sitename}</a>
+      </span>
+      <nav>
+        <ul style="list-style: none; margin: 0; padding-left: 0;">
+          <HeaderLink title="Blog" href="/blog" />
+        </ul>
+      </nav>
+    </header>
+    <h1>{title}</h1>
+    <article>
+      <slot /> <!-- ここにコンテンツが挿入されます -->
+    </article>
+  </body>
+</html>
