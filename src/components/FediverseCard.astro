@@ -1,0 +1,131 @@
+---
+// <FediverseCard id="@akku@example.com" />
+/* TODO
+- isCat
+- アバターデコレーション
+*/
+export interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+
+// WebFinger
+interface WebFingerLink {rel:string; href?:string;}
+interface WebFinger {links:WebFingerLink[]}
+
+// ActivityPub
+interface Image {type:string; url:string;} 
+interface Person {name:string; icon:Image; image:Image;}
+
+// manifest.json
+interface Icon {src:string; sizes:string;}
+interface Manifest {name:string; theme_color:string; icons: Icon[];}
+
+// ret
+interface Server { name:string; host:string; color?:string; faviconURL:string; }
+interface User {
+  name:string;
+  iconURL:string;
+  bannerURL:string; // 現在使ってない
+  username:string; // @akku1139
+  profile:string;
+  server:Server;
+}
+
+const [blank, username, server]:string[] = id.split('@');
+const user:User = await fetch(`https://${server}/.well-known/webfinger?resource=acct:${username}@${server}`).then((r:Response) => { return r.json(); }).then((result:WebFinger) => {
+  const url:string|undefined = result.links.find((link:WebFingerLink) => link.rel === 'self')?.href;
+  if(url === undefined) {
+    throw new Error("WebFingerがエラー: Actorが無い");
+  }
+  const profile:string|undefined = result.links.find((link:WebFingerLink) => link.rel === 'http://webfinger.net/rel/profile-page')?.href;
+  if(profile === undefined) {
+    throw new Error("プロフィールが見つからない");
+  }
+  return fetch(url, {
+    headers: {
+      Accept: "application/activity+json"
+    }
+  }).then((r:Response) => { return r.json(); }).then((result:Person) => {
+    interface User_min {
+      name:string;
+      iconURL:string;
+      bannerURL:string;
+      username:string;
+      profile:string;
+    }
+    let icon:string|undefined|null;
+    try {
+      icon = result.icon.url;
+    } catch(e) {
+      icon = "/error.png";
+      // throw new Error("アイコンがロード不可");
+    }
+
+    let banner:string|undefined|null;
+    try {
+      banner = result.image.url;
+    } catch(e) {
+      banner = "/error.png";
+      // throw new Error("バナーがロード不可");
+    }
+
+    const u:User_min = {
+      name: result.name,
+      iconURL: icon,
+      bannerURL: banner,
+      username: username,
+      profile: profile
+    };
+    return fetch(`https://${server}/manifest.json`).then((r:Response) => { return r.json(); }).then((result:Manifest) => {
+      return {
+        name: u.name,
+        iconURL: u.iconURL,
+        bannerURL: u.bannerURL,
+        username: u.username,
+        profile: u.profile,
+        server: {
+          name: result.name,
+          color: result.theme_color,
+          host: server,
+          faviconURL: new URL(result.icons[0].src, "https://"+server).href
+        }
+      };
+    });
+  });
+}).catch((e) => {
+  console.log(`-----@${username}@${server}-----\n${e}`);
+  return {
+    name: "error",
+    iconURL: "error",
+    bannerURL: "erroe",
+    username: username,
+    profile: "http://example.com",
+    server: {
+      name: "error",
+      color: "error",
+      host: server,
+      faviconURL: "error"
+    }
+  }
+});
+---
+<div style="height: 100px; width: 400px; font-size: 16px; line-height: 160%; margin: 10px 0; border-radius: 20px; border: 3px solid var(--header-color);">
+  <a href={user.profile} style="text-decoration:none; color: #eee; display: flex;">
+    <img src={user.iconURL} alt="アイコン" height="100px" width="100px" style="border-radius: 20px;" />
+    <div style="width: 300px; margin: auto 10px;">
+      <div>{user.name}</div>
+      <code style="border-radius: 5px; background-color: var(--code-bg-color); padding: 1px 5px;">
+        @{user.username}<span style="color: var(--light-text-color);">@{user.server.host}</span>
+      </code>
+      <div style=`
+        background: linear-gradient(to right, ${user.server.color}, transparent);
+        height: 20px; display: flex; align-items: center;
+      `>
+        <img src={user.server.faviconURL} alt="favicon" height="20xp" width="20px" />
+        <span>{user.server.name}</span>
+      </div>
+    </div>
+  </a>
+</div>

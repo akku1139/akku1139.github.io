@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 const title:string = "タイトル";
+import FediverseCard from '@/components/FediverseCard.astro';
 ---
 
 <BaseLayout title={title}>
   どうでも良い記事
+  <FediverseCard id="@akku@misskey.04.si" />
 </BaseLayout>

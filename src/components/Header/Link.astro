@@ -4,7 +4,7 @@ export interface Props {
   href: string;
 }
 
-const { href, title } = Astro.props;
+const { title, href } = Astro.props;
 ---
 <li style="
   padding: 10px;
@@ -15,5 +15,5 @@ const { href, title } = Astro.props;
     text-decoration:none;
   ">
     {title}
-    </a>
+  </a>
 </li>
