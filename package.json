@@ -2,6 +2,6 @@
   "name": "akku1139.github.io",
   "private": true,
   "scripts": {
-    "build": ""
+    "build": "bun build/index.ts"
   }
 }
