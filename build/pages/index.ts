@@ -1,8 +1,9 @@
 import { Glob } from "bun";
-import path from "node:path";
+
+import build from "../loaders";
 
 const glob = new Glob("**/*");
 
 for await (const file of glob.scan("./pages/")) {
-  console.log(file);
+  console.log(build(file));
 }
