@@ -1,6 +1,6 @@
 import { loader } from "./types";
 
-import marked from 'marked';
+import { marked } from 'marked';
 
 const md: loader = (content) => {
   return marked(content);
