@@ -50,9 +50,9 @@ jobs:
 
       - name: Build
         run: ./bin/hugo \
+              --gc \
               --minify \
-              --baseURL "${{ steps.pages.outputs.base_url }}/" \
-              --gc \ # 必要ないキャッシュを削除
+              --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
