@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ./bin
-          key: bin-cache-${{ env.HUGO_VERSION }}
+          key: bin-cache-hugo-${{ env.HUGO_VERSION }}
 
       - name: Setup Hugo
         if: steps.cache-bin.outputs.cache-hit != 'true'
@@ -49,10 +49,11 @@ jobs:
           key: resources-cache
 
       - name: Build
-        run: ./bin/hugo \
-              --gc \
-              --minify \
-              --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: |
+          ./bin/hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
