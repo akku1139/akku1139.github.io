@@ -7,5 +7,11 @@ enableRobotsTXT = true
 [permalinks]
   blog = "/blog/post/:filename/"
 
+[menus]
+[[menus.main]]
+  name = 'ブログ'
+  pageRef = '/blog'
+  weight = 20
+
 [params]
   favicon = "images/favicon.png"
