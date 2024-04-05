@@ -1,3 +1,6 @@
 title = 'akkuのホームページ'
 languageCode = 'ja-jp'
 theme = "hugo-bearcub"
+
+[permalinks]
+  blog = "/blog/post/:slug/"
