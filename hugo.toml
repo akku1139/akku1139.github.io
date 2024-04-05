@@ -1,6 +1,11 @@
 title = 'akkuのホームページ'
 languageCode = 'ja-jp'
+
 theme = "hugo-bearcub"
+enableRobotsTXT = true
 
 [permalinks]
   blog = "/blog/post/:filename/"
+
+[params]
+  favicon = "images/favicon.png"
