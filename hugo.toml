@@ -1,6 +1,7 @@
 title = "akku's website"
 copyright = "-akku-"
 languageCode = 'ja-jp'
+timeZone = "Asia/Tokyo"
 hasCJKLanguage = true
 
 theme = "hugo-bearcub"
