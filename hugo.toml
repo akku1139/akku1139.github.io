@@ -1,2 +1,3 @@
 title = 'akkuのホームページ'
 languageCode = 'ja-jp'
+theme = "hugo-bearcub"
