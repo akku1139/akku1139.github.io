@@ -1,8 +1,7 @@
 ---
 title: About
+date: 2024-04-04
 
-showDate: false
-showPagination: false
 _build:
   list: never
 ---
