@@ -4,8 +4,7 @@ date: 2024-04-06
 tags: ["仮想通貨", "Monero"]
 ---
 
-エチオピアの銀行で無限に現金を引き出せる「不具合」が発生していたことが判明、地元メディアによると被害額は60億円以上 - Gigazine
-https://gigazine.net/news/20240321-ethiopia-bank-glitch/
+[エチオピアの銀行で無限に現金を引き出せる「不具合」が発生していたことが判明、地元メディアによると被害額は60億円以上 - Gigazine](https://gigazine.net/news/20240321-ethiopia-bank-glitch/)
 
 この記事を読んで銀行の危険性がわかりましたか?
 
@@ -27,6 +26,7 @@ https://gigazine.net/news/20240321-ethiopia-bank-glitch/
 ## では安全なお金とは何?
 
 Moneroです。
+
 名前にはエスペラント語で「通貨」という意味があります。
 
 ### お金を管理する人は居ない
@@ -60,7 +60,6 @@ Moneroは分散していますから停止しません。
 逆に他の人が持った場合はその人が全てを使用できます。
 必ずなくさないようにしてください。
 
-詳しくはテクニカル諏訪子さんの記事を参照してください。
-https://technicalsuwako.moe/blog/crypto-1-monero-dero-wallet.xhtml
+詳しくは[テクニカル諏訪子さんの記事](https://technicalsuwako.moe/blog/crypto-1-monero-dero-wallet.xhtml)を参照してください。
 
 以上。
