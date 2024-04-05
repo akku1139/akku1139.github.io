@@ -7,7 +7,7 @@ theme = "hugo-bearcub"
 enableRobotsTXT = true
 
 [permalinks]
-  blog = "/blog/:filename/"
+  #blog = "/blog/:filename/"
 
 [menus]
   [[menus.main]]
