@@ -1,5 +1,5 @@
 title = "akku's website"
-copyright = "akku"
+copyright = "-akku-"
 languageCode = 'ja-jp'
 
 theme = "hugo-bearcub"
@@ -15,8 +15,13 @@ enableRobotsTXT = true
   weight = 20
 
 [params]
+  description = "akkuのWebサイト"
   favicon = "images/favicon.png"
-  madeWith = "Made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
+  madeWith = "made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
+
+  [params.author]
+    name = "akku"
+    email = "root@akku.dedyn.io"
 
   [params.social]
     twitter = "akku1139"
