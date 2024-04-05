@@ -1,4 +1,4 @@
-title = 'akkuのホームページ'
+title = "akku's website"
 languageCode = 'ja-jp'
 
 theme = "hugo-bearcub"
@@ -9,9 +9,12 @@ enableRobotsTXT = true
 
 [menus]
 [[menus.main]]
-  name = 'ブログ'
+  name = 'Blog'
   pageRef = '/blog'
   weight = 20
 
 [params]
   favicon = "images/favicon.png"
+
+  [params.social]
+    twitter = "akku1139"
