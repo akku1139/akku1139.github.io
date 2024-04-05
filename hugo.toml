@@ -3,4 +3,4 @@ languageCode = 'ja-jp'
 theme = "hugo-bearcub"
 
 [permalinks]
-  blog = "/blog/post/:slug/"
+  blog = "/blog/post/:filename/"
