@@ -20,8 +20,8 @@ enableRobotsTXT = true
   madeWith = "made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
 
   [params.author]
-    name = "akku"
-    email = "root@akku.dedyn.io"
+    name = "-akku-"
+    # email = "root@akku.dedyn.io"
 
   [params.social]
     twitter = "akku1139"
