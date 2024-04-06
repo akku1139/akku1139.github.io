@@ -1,6 +1,6 @@
 ---
 title: 銀行は危険?
-description: 銀行は本当に安全でしょうか?
+summary: 銀行は本当に安全でしょうか?
 date: 2024-04-06
 # tags: ["仮想通貨", "Monero"]
 ---
