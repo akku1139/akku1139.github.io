@@ -1,6 +1,6 @@
 ---
 title: こんにちは
-description: 初回
+summary: 初回
 date: 2024-04-04
 ---
 
