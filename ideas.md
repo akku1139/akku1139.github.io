@@ -4,6 +4,7 @@
 - 仮想DOMはいらない
 - Vite、何がよくて何がだめか。そしてRolldown
 - コマンド紹介シリーズ
+- Cloudflare Pages vs GitHub Pages
 
 ## 構造
 
