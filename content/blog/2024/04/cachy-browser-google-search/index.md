@@ -9,7 +9,7 @@ date: 2024-04-07 15:00:00
 
    https://github.com/jusw85/mozlz4
 
-2. プロファイルフォルダに移動 `cd .cachy/[あなたのプロファイル]`
+2. プロファイルフォルダに移動 `cd ~/.cachy/[あなたのプロファイル]`
 3. `mozlz4-linux search.json.mozlz4 search.json`
 4. `vi search.json`
 5. Googleの "hidden":true を "hidden":false に置き換え 
