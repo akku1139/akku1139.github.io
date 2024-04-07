@@ -1,6 +1,7 @@
 ---
 title: 【簡単】 Firefox Developer EditionをCachy Browserに交換方法
 summary: 悪戦苦闘の記録
+tags: ["Firefox"]
 date: 2024-04-07
 ---
 
