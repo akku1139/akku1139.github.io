@@ -5,6 +5,7 @@
 - Vite、何がよくて何がだめか。そしてRolldown
 - コマンド紹介シリーズ
 - Cloudflare Pages vs GitHub Pages
+- yamlを評価
 
 ## 構造
 
