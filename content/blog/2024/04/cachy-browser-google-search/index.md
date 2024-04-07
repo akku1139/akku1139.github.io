@@ -1,7 +1,7 @@
 ---
 title: Cachy BrowserでGoogle検索を戻し方
 summary: Cachy Browserを入れたらGoogle検索が削除されましたため修正します。
-date: 2024-04-07 15-01-01
+date: 2024-04-07 15:00:00
 ---
 
 0. ブラウザの終了
