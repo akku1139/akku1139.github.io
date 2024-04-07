@@ -4,6 +4,7 @@ summary: Cachy Browserを入れたらGoogle検索が削除されましたため�
 date: 2024-04-07
 ---
 
+0. ブラウザの終了
 1. mozlz4を落とす
 
    https://github.com/jusw85/mozlz4
@@ -11,8 +12,14 @@ date: 2024-04-07
 2. プロファイルフォルダに移動 `cd .cachy/[あなたのプロファイル]`
 3. `mozlz4-linux search.json.mozlz4 search.json`
 4. `vi search.json`
-5. Googleの "hidden":true を "hidden":false に置き換え
-6. `mozlz4-linux -z search.json search.json.mozlz4`
-7. `rm search.json`
+5. Googleの "hidden":true を "hidden":false に置き換え 
+
+   ![作業](./edit.png)
+
+7. `mozlz4-linux -z search.json search.json.mozlz4`
+8. `rm search.json`
+9. ブラウザを起動
+
+   ![画面](./setting.png)
 
 以上。
