@@ -62,6 +62,6 @@ Cachyはいくつかの設定を変更しましたためそれらを戻します
 
 にあると思います。
 
-追加: Googleの戻し方を書きました [こちら](../cachy-browser-google-search)
+追加: Googleの戻し方を書きました [こちら](/blog/cachy-browser-google-search/)
 
 以上。
