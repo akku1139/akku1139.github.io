@@ -6,6 +6,7 @@
 - コマンド紹介シリーズ
 - Cloudflare Pages vs GitHub Pages
 - yamlを評価
+- 分散SNSってよく言えば温故知新、悪く言えば車輪の再発明。
 
 ## 構造
 
