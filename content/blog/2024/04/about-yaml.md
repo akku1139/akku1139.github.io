@@ -130,7 +130,7 @@ TOMLは Python 3.11 から `tomllib` としてバッテリーに追加されま�
 ```yaml
 Japan:
   lang: ja
-Norway
+Norway:
   lang: no
 ```
 ([人間が書くための設定ファイルに何を選ぶのか](https://qiita.com/Nabetani/items/56f8097b92385ad276fc) より引用・改変)
