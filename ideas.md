@@ -11,6 +11,10 @@
 - ED法
   https://qiita.com/kanekanekaneko/items/901ee2837401750dfdad
 
+### 書きかけ
+
+[漢字ネタ](content/blog/2024/04/japanese-without-kanji.md)
+
 ## 構造
 
 sitemap.xml などのためにサブプロジェクトにルートを作って別リポのpagesで上書き
