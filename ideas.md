@@ -9,6 +9,8 @@
 - ACメソッド 因数分解
 - ED法 https://qiita.com/kanekanekaneko/items/901ee2837401750dfdad
 - 分散型SNSで分断の加速
+- JSRについて
+- Deno等URL importについて
 
 ### 書きかけ
 
