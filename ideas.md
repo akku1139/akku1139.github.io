@@ -19,3 +19,19 @@
 sitemap.xml などのためにサブプロジェクトにルートを作って別リポのpagesで上書き
 - yt-stream
 - altproject
+
+## 簡易書き換え機構
+
+```js
+document.addEventListener("click", (e) => {
+  if(e.target.tagName === "A") {
+    fetch(e.target.href).then((r) =>
+      r.text().then((t) => {
+        history.pushState(null, null, e.target.href);
+        document.documentElement.innerHTML = t;
+      })
+    );
+    e.preventDefault();
+  }
+});
+```
