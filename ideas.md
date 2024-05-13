@@ -24,7 +24,7 @@ sitemap.xml などのためにサブプロジェクトにルートを作って�
 
 ```js
 document.addEventListener("click", (e) => {
-  if(e.target.tagName === "A") {
+  if(e.target.tagName === "A" && new URL(e.target.href).origin === location.origin) {
     fetch(e.target.href).then((r) =>
       r.text().then((t) => {
         history.pushState(null, null, e.target.href);
