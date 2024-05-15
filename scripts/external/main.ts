@@ -1,5 +1,5 @@
 import zenn from "./zenn.ts";
 
-console.log([
+console.log(JSON.stringify([
   ...zenn,
-]);
+]));
