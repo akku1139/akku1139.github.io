@@ -6,7 +6,7 @@
   <ul class="blog-posts">
     {{ $articles := merge .Pages $.Site.Data.external }}
 
-    {{ range .Pages }}
+    {{ range $articles }}
     <li>
       <span>
         <i>
