@@ -3,7 +3,7 @@
   {{ if .Data.Singular }}
     <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
   {{ end }}
-  {{ .Posts | jsonify }}
+  {{ .Posts.ByDate | jsonify }}
   <ul class="blog-posts">
     {{ range .Pages }}
     <li>
