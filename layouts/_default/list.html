@@ -3,10 +3,9 @@
   {{ if .Data.Singular }}
     <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
   {{ end }}
+  {{ .Posts | jsonify }}
   <ul class="blog-posts">
-    {{ $articles := merge .Pages $.Site.Data.external }}
-
-    {{ range $articles }}
+    {{ range .Pages }}
     <li>
       <span>
         <i>
