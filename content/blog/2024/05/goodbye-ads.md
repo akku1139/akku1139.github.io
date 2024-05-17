@@ -39,7 +39,7 @@ uBlock (originではない)の開発は最早行われていません。
 
 詳しくは以下の記事を読んでください。
 
-https://github.com/Yuki2718/adblock2/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F
+[https://github.com/Yuki2718/adblock2/wiki/よくある質問](https://github.com/Yuki2718/adblock2/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F)
 
 また、[なんJ AdGuard部](https://wikiwiki.jp/nanj-adguard/)も参考になります。
 
