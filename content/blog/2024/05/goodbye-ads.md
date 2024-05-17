@@ -28,7 +28,7 @@ GoogleはWebを高速化すると言いながら自分たちはとても遅い�
 
 答えは広告ブロッカーです。
 
-- uBlockOrigin ([公式サイト](https://ublockorigin.com/) [Chrome版](https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) [Firefox版](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/))
+- uBlock Origin ([公式サイト](https://ublockorigin.com/) [Chrome版](https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) [Firefox版](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/))
 - AdGuard ([公式サイト](https://adguard.com/) [Chrome版](https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) [Firefox版](https://addons.mozilla.org/en-US/firefox/addon/adguard-adblocker/))
 
 のどちらかをインストールしてください。 それ以外は偽物と考えて問題ありません。
