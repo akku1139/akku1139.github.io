@@ -33,9 +33,9 @@ document.addEventListener("click", (e) => {
       r.text().then((t) => {
         history.pushState(null, null, e.target.href);
         document.documentElement.innerHTML = t;
+        e.preventDefault();
       })
     );
-    e.preventDefault();
   }
 });
 ```
