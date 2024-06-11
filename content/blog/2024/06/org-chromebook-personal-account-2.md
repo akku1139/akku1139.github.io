@@ -15,8 +15,8 @@ date: 2024-06-11
 ポリシーの説明を読んでみましょう。
 
 > このポリシーがドメイン名を表す文字列に設定されている場合は、Google ChromeOS でユーザーがログインする際に予測入力のオプションが表示されます。この場合、ユーザーはドメイン名の部分を省略してユーザー名を入力するだけで済みます。また、ユーザーはこのドメイン名の部分を上書きすることもできます。
-
-[引用元](https://chromeenterprise.google/policies/?policy=DeviceLoginScreenDomainAutoComplete)
+> 
+> 引用元: [chrome enterprise](https://chromeenterprise.google/policies/?policy=DeviceLoginScreenDomainAutoComplete)
 
 「上書きできる」そうです。
 
