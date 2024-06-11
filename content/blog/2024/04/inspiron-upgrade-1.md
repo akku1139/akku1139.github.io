@@ -38,9 +38,9 @@ Intel 4世代(Haswell)と5世代(Broadwell)ではLGA1155とソケットに互換
 5世代CPUのためには Intel 9 シリーズのチップセットが必要となり、残念ながら対応できません。
 
 ```yaml
-CPU: Core i5-4670 
+CPU: Core i5-4670
 GPU: Intel HD Graphics 4600 (内蔵)
-メモリ: 816GB (8GB *2) DDR3
+メモリ: 16GB (8GB *2) DDR3
 ```
 
 最終的に上記の構成を目指しています。
