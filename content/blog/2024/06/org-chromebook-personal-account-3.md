@@ -11,3 +11,5 @@ date: 2024-06-19
 もうSH1MMERとe-halcyonを使うしかないですね。
 
 https://blogbooks.net/chromebook/3883/ ([ミラー](https://bbs-copy.pages.dev/chromebook/3883/))
+
+追記: 再起動したら治った
