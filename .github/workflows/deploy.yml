@@ -79,5 +79,9 @@ jobs:
   list:
     runs-on: ubuntu-latest
     steps:
-     - name: List up draft posts
-       run: "grep -rl 'draft:.*true' content"
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: List up draft posts
+        run: "grep -rl 'draft:.*true' content"
