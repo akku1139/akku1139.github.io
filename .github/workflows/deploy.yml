@@ -75,6 +75,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Send ping to blogmura
+        run: "curl ${{ secrets.BLOGMURA_PING_URL }}"
 
   list:
     runs-on: ubuntu-latest
