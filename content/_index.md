@@ -25,4 +25,4 @@
 
 Let's click!
 
-<a href="https://blogmura.com/ranking/in?p_cid=11191815" target="_blank"><img src="https://b.blogmura.com/banner-blogmura-landscape.svg" width="120" height="33" border="0" alt="ブログランキング・にほんブログ村へ" /></a>
+[![ブログランキング・にほんブログ村へ](https://b.blogmura.com/banner-blogmura-landscape.svg)](https://blogmura.com/ranking/in?p_cid=11191815)
