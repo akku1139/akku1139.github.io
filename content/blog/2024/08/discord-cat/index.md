@@ -144,6 +144,12 @@ https://raw.githubusercontent.com/Vencord/builds/main/Vencord.user.js
 
 そして、インストールボタンを押してください。
 
+### インストールが終わりました。
+
+**もしブラウザ版Discordを開いていたらリロードしてください**
+
+また、稀にVencordがロードされないこともあるのでその時はもう一度リロードしてください。
+
 完了です!
 
 ## 2. プラグインをセットアップ
