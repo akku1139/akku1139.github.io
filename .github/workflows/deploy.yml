@@ -25,6 +25,9 @@ jobs:
         with:
           submodules: recursive
 
+      - name: List up draft posts
+        run: "grep -rl 'draft:.*true' content"
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -78,13 +81,3 @@ jobs:
         uses: actions/deploy-pages@v4
       - name: Send ping to blogmura
         run: "curl ${{ secrets.BLOGMURA_PING_URL }}"
-
-  list:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-      - name: List up draft posts
-        run: "grep -rl 'draft:.*true' content"
