@@ -43,6 +43,7 @@ func main() {
 例えば次のようなRubyコードを考えてみてください。
 
 ```ruby {name="main.rb"}
+# main.rb
 def hello
     p "hi"
 end
@@ -55,7 +56,8 @@ require "./mod1.rb"
 hello
 ```
 
-```ruby {name="mod1.ruby"}
+```ruby {name="mod1.rb"}
+# mod1.rb
 def hello
     p "ya"
 end
@@ -82,12 +84,14 @@ $ ruby main.rb
 それはJavaScript(ES Modules)を見れば理解できます。
 
 ```js {name="index.mjs"}
+// index.mjs
 import hello, { hi } from "./mod1.mjs"
 hello()
 hi()
 ```
 
 ```js {name="mod1.mjs"}
+// mod1.mjs
 export const hi = () => {
   console.log("hi!")
 }
