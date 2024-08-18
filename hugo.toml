@@ -4,7 +4,7 @@ languageCode = 'ja-jp'
 timeZone = "Asia/Tokyo"
 hasCJKLanguage = true
 
-theme = "hugo-bearcub"
+theme = "hugo-bearhouse"
 enableRobotsTXT = true
 
 [permalinks]
@@ -24,7 +24,7 @@ enableRobotsTXT = true
 [params]
   description = "akku's website"
   favicon = "images/favicon.png"
-  madeWith = "made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
+  madeWith = "made with [Bear House](https://github.com/akku1139/hugo-bearhouse.git)"
 
   [params.author]
     name = "-akku-"
