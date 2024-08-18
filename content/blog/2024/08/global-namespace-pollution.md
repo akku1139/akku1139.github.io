@@ -25,6 +25,8 @@ json_str = '{"name": "Ruby", "age": 30}'
 JSON.parse(json_str) # => {"name"=>"Ruby", "age"=>30}
 ```
 
+ちなみに `open-uri` をrequireすると `URI.open` 等が追加され、ライブラリ名と増える名前に規則性は有りません。
+
 Goでは (ほとんど知らないので一般的なHelloWorldを出します)
 ```go
 package main
