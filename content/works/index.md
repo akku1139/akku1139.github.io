@@ -33,7 +33,7 @@ JavaScript不要のWebツール集
 
 ## Hono日本語版ドキュメント
 
-[Hono 🔥]の非公式ドキュメント翻訳
+[Hono 🔥](https://hono.dev)の非公式ドキュメント翻訳
 
 | key | value |
 | --- | --- |
