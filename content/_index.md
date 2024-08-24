@@ -12,6 +12,7 @@
 | [nakasyou's profile](https://nakasyou.github.io/) | nakasyou | 2024-06-30 |
 | [Amex Net](https://www.ame-x.net/) | amex | 2024-07-24 |
 | [BlogBooks Library](https://blogbooks.net) | localer | 2024-07-25 |
+| [nishi.boats](https://nishi.boats/) | nishi | 2024-08-24 |
 
 ## Donate
 
