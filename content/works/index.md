@@ -4,6 +4,15 @@ summary: My works
 date: 2024-08-24
 ---
 
+## Auto-AUR
+
+Chaotic-AURを補完するビルド済みAURリポジトリ
+
+| key | value |
+| --- | --- |
+| Repository | https://github.com/akku1139/auto-aur |
+| Site | https://auto-aur.pages.dev |
+
 ## 予約サイト
 
 文化祭のために作ったやつ
