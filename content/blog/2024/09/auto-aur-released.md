@@ -15,7 +15,7 @@ AURのビルド済みバージョンをホストするリポジトリです
 
 ## 使い方
 
-rootでコマンドを実行
+### rootでコマンドを実行
 
 ```sh
 pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
@@ -29,7 +29,9 @@ pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst
 'https://auto-aur.pages.dev/repo/auto-aur/x86_64/auto-aur-mirrorlist-20240923-1-any.pkg.tar.zst'
 ```
 
-`/etc/pacman.conf` に行を追加
+Chaotic-AURを補完するリポジトリとして作成されたため、Chaotic-AURのセットアップが推奨されます。
+
+### `/etc/pacman.conf` に行を追加
 
 ```ini
 [chaotic-aur]
@@ -39,7 +41,7 @@ Include = /etc/pacman.d/chaotic-mirrorlist
 Include = /etc/pacman.d/auto-aur-mirrorlist
 ```
 
-リポジトリを更新 (root)
+### リポジトリを更新 (root)
 
 ```
 pacman -Sy
@@ -49,7 +51,7 @@ pacman -Sy
 pacman -Syu
 ```
 
-インストール可能になったパッケージをご確認ください
+### インストール可能になったパッケージをご確認ください
 
 ```
 pacman -Sl auto-aur
