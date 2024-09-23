@@ -23,9 +23,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: List up draft posts
-        run: "grep -rl 'draft:.*true' content"
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
