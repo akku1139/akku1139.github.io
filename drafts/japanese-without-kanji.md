@@ -32,6 +32,10 @@ draft: true
 
 また、「しょうがい」は「障碍」だったものが「障害」に改められ(理由はなんと常用漢字外のため)、「害」という字の印象から「障がい」と言われるようになっています。
 
+https://www.koka.ac.jp/welfare/news/4405/
+
+https://www.rehab.go.jp/rehanews/japanese/No226/5_story.html
+
 これらを漢字で表現しないのは何故でしょうか?
 
 - 漢字廃止論
