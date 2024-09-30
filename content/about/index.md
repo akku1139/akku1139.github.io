@@ -12,9 +12,41 @@ Scratch経由で今は亡き匿名技研から技術界隈に入り浸ってし�
 
 フルート吹き。
 
+
 ## 私が取り組んでいること
 
 - [My Works](/works)
+
+
+## Dev
+
+### Programming language
+
+1. Python (v3)
+2. TypeScript
+3. Shell Script (bash)
+
+
+### LICENSE
+
+1. AGPLv3
+2. MIT
+3. The Unlicense
+
+
+### OS
+
+1. Arch Linux
+2. Alpine Linux
+3. Ubuntu (GitHub Actions)
+4. Debian (Sid branch)
+5. Windows 10
+
+
+### VCS
+
+1. Git
+
 
 ## Accounts
 
