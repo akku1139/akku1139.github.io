@@ -5,6 +5,27 @@
 
 ![Moe Counter](https://moe-counter.glitch.me/get/@akku1139.github.io?theme=rule34)
 
+
+## Discord
+
+My server `ℕ𝕦𝕝𝕝 𝕊𝕥𝕦𝕕𝕚𝕠™`
+
+### Info
+
+key | value
+--- | ---
+name | ℕ𝕦𝕝𝕝 𝕊𝕥𝕦𝕕𝕚𝕠™ (Null Studio)
+id | `1171778102741970964`
+language | Japanese, Python, English, TypeScript
+
+### Join
+
+Board | Link
+--- | ---
+ディス速 | https://dissoku.net/ja/server/1171778102741970964
+Disboard | https://disboard.org/server/1171778102741970964
+Discall | https://jp.dicoall.com/server/1171778102741970964
+
 ## Mutual Links
 
 | Site | Owner | Date |
