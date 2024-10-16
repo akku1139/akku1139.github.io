@@ -34,6 +34,10 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | [Amex Net](https://www.ame-x.net/) | amex | 2024-07-24 |
 | [nishi.boats](https://nishi.boats/) | nishi | 2024-08-24 |
 
+## WebRing
+
+[←](https://musubink.fyi/musubink/previous)[Musubink](https://musubink.fyi/musubink/random)[→](https://musubink.fyi/musubink/next)
+
 ## Donate
 
 | Coin | Address |
