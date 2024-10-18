@@ -36,7 +36,7 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 
 ## WebRing
 
-[←](https://musubink.fyi/musubink/previous)[Musubink](https://musubink.fyi/musubink/random)[→](https://musubink.fyi/musubink/next)
+[←](https://musubink.fyi/akku/previous)[Musubink](https://musubink.fyi/akku/random)[→](https://musubink.fyi/akku/next) ([home page](https://musubink.fyi/))
 
 ## Donate
 
