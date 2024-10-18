@@ -47,6 +47,7 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | Monacoin (MONA) | `MACYgBCyysdPBxxF8nRbAgM22hkZMETfZk` |
 | Solana (SOL) | `8h8EemMqLkpAfQXzGA1DXtaX5JjkHAR4AQ37EHeSpsWt` |
 | Nano (XNO) | `nano_3dkqp8f4rrcr1zjx31rq6mr69tfizx5dx3yrn34iptx9u1qiymi4uxb7goxn` |
+| Duino-Coin (DUCO) | `akku` |
 
 ## Blog Mura
 
