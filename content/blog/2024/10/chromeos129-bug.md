@@ -1,7 +1,7 @@
 ---
 title: ChromeOSのバグについて (ver 129)
 date: 2024-10-15
-lastmod: 2024-10-16
+lastmod: 2024-10-21
 tags:
   - chromebook
 ---
@@ -22,6 +22,8 @@ ChromeOS Version 129.0.6668.99 (Official Build) (64-bit)
 他の端末及び、組織で管理されたネットワークでは試していません。
 
 10/16追記: 組織管理のWi-Fiでは発生しなかったことを確認。
+
+10/21追記: ver 129.0.6668.110 にて組織Wi-Fiでも問題が発生
 
 
 ## 経緯
