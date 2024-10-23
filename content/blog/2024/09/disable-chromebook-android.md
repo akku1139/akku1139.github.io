@@ -3,7 +3,7 @@ title: 【非推奨】【学タブ】 ChromebookのAndroidサブシステムを�
 date: 2024-09-24
 lastmod: 2024-10-09
 tags:
- - chromebook
+- Chromebook
 ---
 
 2024/9/24 追記: このメソッドは非推奨になりました。

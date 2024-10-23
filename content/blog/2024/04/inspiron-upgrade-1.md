@@ -1,6 +1,9 @@
 ---
 title: "メインPCのCPUとメモリ交換の検討"
 date: 2024-04-30
+tags:
+- PC
+- Inspiron3647
 ---
 
 私のメインPCは Dell Inspiron 3647 (メモリ、ストレージ換装済み)です。

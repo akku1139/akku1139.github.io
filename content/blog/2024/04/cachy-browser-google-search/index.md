@@ -1,7 +1,9 @@
 ---
 title: Cachy BrowserでGoogle検索を戻し方
 summary: Cachy Browserを入れたらGoogle検索が削除されましたため修正します。
-tags: [Firefox]
+tags:
+- Firefox
+- CachyOS
 date: 2024-04-07 15:00:00
 ---
 
@@ -13,7 +15,7 @@ date: 2024-04-07 15:00:00
 2. プロファイルフォルダに移動 `cd ~/.cachy/[あなたのプロファイル]`
 3. `mozlz4-linux search.json.mozlz4 search.json`
 4. `vi search.json`
-5. Googleの "hidden":true を "hidden":false に置き換え 
+5. Googleの "hidden":true を "hidden":false に置き換え
 
    ![作業](./edit.png)
 

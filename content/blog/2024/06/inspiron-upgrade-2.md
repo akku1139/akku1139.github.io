@@ -1,6 +1,9 @@
 ---
 title: "メインPCのCPUとメモリを交換しました"
 date: 2024-06-11
+tags:
+- PC
+- Inspiron3647
 ---
 
 [前の記事](/blog/inspiron-upgrade-1/)でCPUとメモリを交換しようと検討していました。

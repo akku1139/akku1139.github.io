@@ -1,7 +1,9 @@
 ---
 title: YAMLについて
 summary: 最近よくYAMLを見かけますが、私がYAMLに対してどのような感想を持っているのか説明します。
-tags: ["YAML"]
+tags:
+- YAML
+- プログラミング
 date: 2024-04-21
 ---
 

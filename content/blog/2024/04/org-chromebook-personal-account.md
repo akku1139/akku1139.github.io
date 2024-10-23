@@ -1,6 +1,7 @@
 ---
 title: 組織で管理されたChromebookに個人アカウントを追加方法
-tags: ["Chromebook"]
+tags:
+- Chromebook
 date: 2024-04-25
 ---
 

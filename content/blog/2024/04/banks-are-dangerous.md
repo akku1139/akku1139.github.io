@@ -2,7 +2,9 @@
 title: 銀行は危険?
 summary: 銀行は本当に安全でしょうか?
 date: 2024-04-06
-# tags: ["仮想通貨", "Monero"]
+tags:
+- 仮想通貨
+- Monero
 ---
 
 [エチオピアの銀行で無限に現金を引き出せる「不具合」が発生していたことが判明、地元メディアによると被害額は60億円以上 - Gigazine](https://gigazine.net/news/20240321-ethiopia-bank-glitch/)
