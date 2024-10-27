@@ -41,3 +41,7 @@ document.addEventListener("click", (e) => {
   }
 });
 ```
+
+## ページ専用JS, CSS, etc...ロード機構
+
+https://discourse.gohugo.io/t/how-to-load-some-selected-js-scripts-on-selected-pages-only/33665
