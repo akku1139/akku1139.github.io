@@ -4,11 +4,10 @@ summary: 今こそブラウザJavaScriptを無効化する時です。
 date: 2024-10-27
 tags:
   - セキュリティ
-layout: noscript
-type: single
 ---
 
-<script> document.getElementsByTagName("content")[0].textContent = "Please disable JavaScript to view this site."; </script>
+{{ $html := "<script> document.getElementsByTagName("content")[0].textContent = 'Please disable JavaScript to view this site.'; </script>" }}
+{{ $html | safeHTML }}
 
 元ネタ: [The WWWorst App Store - GNU](https://www.gnu.org/philosophy/wwworst-app-store.html)
 
