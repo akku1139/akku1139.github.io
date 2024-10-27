@@ -31,6 +31,11 @@ enableRobotsTXT = true
     pageRef = '/blog'
     weight = 20
 
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 25
+
 [params]
   description = "akku's website"
   favicon = "images/favicon.png"
