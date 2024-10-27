@@ -4,6 +4,8 @@ summary: 今こそブラウザJavaScriptを無効化する時です。
 date: 2024-10-27
 tags:
   - セキュリティ
+layout: noscript
+type: single
 ---
 
 元ネタ: [The WWWorst App Store - GNU](https://www.gnu.org/philosophy/wwworst-app-store.html)
