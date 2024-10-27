@@ -7,7 +7,7 @@ tags:
 ---
 
 <script>
-document.getElementsByTagName("content")[0].innerText = "Please disable JavaScript to view this site.";
+document.getElementsByTagName("content")[0].textContent = "Please disable JavaScript to view this site.";
 </script>
 
 元ネタ: The WWWorst App Store
