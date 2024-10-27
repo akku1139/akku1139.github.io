@@ -47,3 +47,10 @@ enableRobotsTXT = true
 
   [params.social]
     twitter = "akku1139"
+
+# https://budougumi0617.github.io/2020/03/10/hugo-render-raw-html/
+# https://gohugo.io/getting-started/configuration-markup/#goldmark
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
