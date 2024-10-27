@@ -8,6 +8,7 @@ on:
       - content/**
       - static/**
       - themes/**
+      - layouts/**
 
 concurrency:
   group: pages
