@@ -3,7 +3,7 @@
 
 やぁ
 
-![Moe Counter](https://moe-counter.glitch.me/get/@akku1139.github.io?theme=rule34)
+![Moe Counter](https://moe-counter.glitch.me/get/@akku1139.github.io?theme=rule34&darkmode=0)
 
 
 ## Discord
