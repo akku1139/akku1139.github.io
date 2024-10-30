@@ -26,7 +26,7 @@ pacman-key --lsign-key b465fd29d2ea44cc
 pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' \
 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' \
 'https://auto-aur.pages.dev/repo/auto-aur/x86_64/auto-aur-keyring-20240923-1-any.pkg.tar.zst' \
-'https://auto-aur.pages.dev/repo/auto-aur/x86_64/auto-aur-mirrorlist-20240923-1-any.pkg.tar.zst'
+'https://auto-aur.pages.dev/repo/auto-aur/x86_64/auto-aur-mirrorlist-20241030-1-any.pkg.tar.zst'
 ```
 
 Chaotic-AURを補完するリポジトリとして作成されたため、Chaotic-AURのセットアップが推奨されます。
