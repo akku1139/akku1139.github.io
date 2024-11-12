@@ -2,6 +2,12 @@
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
+## TODOs
+
+- dependabot
+- migrate from hugo
+- format, lint, auto fix (Pull Request)
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
