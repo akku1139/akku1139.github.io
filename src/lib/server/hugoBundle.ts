@@ -9,27 +9,29 @@ export let leaf: HugoBundleFiles = []
 export let branch: HugoBundleFiles = []
 
 let spl
+let importPath
 
 for(let page in rawPages) {
   spl = page.split("/")
+  importPath = "~raw/" + page
 
   switch(spl[spl.length - 1]) {
     case "_index.md":
       branch.push({
-        file: page,
-        route: "~raw/" + page.split("/").slice(3, -1).join("/")
+        file: importPath,
+        route: page.split("/").slice(3, -1).join("/")
       })
       break
     case "index.md":
       leaf.push({
-        file: page,
-        route: "~raw/" + page.split("/").slice(3, -1).join("/")
+        file: importPath,
+        route: page.split("/").slice(3, -1).join("/")
       })
       break
     default:
       leaf.push({
-        file: page,
-        route: "~raw/" + page.replace(/^\/src\/content\//, "").replace(/\.md$/, ""),
+        file: importPath,
+        route: page.replace(/^\/src\/content\//, "").replace(/\.md$/, ""),
       })
       break
   }
