@@ -1,4 +1,4 @@
-import { branch, leaf } from "$lib/server/hugoBundle.ts"
+import { branch, leaf } from "$lib/hugoBundle.ts"
 
 const pages = [...branch, ...leaf]
 const routes = Object.fromEntries(pages.map(page => [page.route, page]))
