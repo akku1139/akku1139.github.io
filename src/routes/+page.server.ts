@@ -1,4 +1,4 @@
-import { branch, leaf } from "$lib/server/HugoBundle.ts"
+import { branch, leaf } from "$lib/server/hugoBundle.ts"
 
 const pages = [...branch, ...leaf]
 
