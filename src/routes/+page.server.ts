@@ -6,8 +6,9 @@ export const entries = () => {
   return pages.map(f => f.route)
 }
 
-export const load = ({ params }) => {
+export const load = async ({ params }) => {
+  const page = await import(pages[params.path])
   return {
-    importPath: pages[params.path]
+    Content: page.default,
   }
 }

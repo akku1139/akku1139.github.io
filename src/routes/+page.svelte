@@ -1,6 +1,6 @@
 <script lang="ts">
   const { data } = $props();
-  const Content = await import(data.importPath)
+  const Content =
 </script>
 
-<svelte:component this={Content} />
+<Content />
