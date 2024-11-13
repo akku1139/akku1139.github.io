@@ -13,7 +13,7 @@ let spl
 for(let page in rawPages) {
   spl = page.split("/")
 
-  switch(spl[spl.length]) {
+  switch(spl[spl.length - 1]) {
     case "_index.md":
       branch.push({
         file: page,
