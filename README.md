@@ -7,8 +7,8 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - dependabot
 - migrate from hugo
 - format, lint, auto fix (Pull Request)
-- RSS
-- Sitemap
+- RSS (Hono JSX)
+- Sitemap (Hono JSX)
 - TypeCheck
 
 ## Hugo output (without dirs)
