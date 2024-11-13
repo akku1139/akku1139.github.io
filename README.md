@@ -11,6 +11,10 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Sitemap (Hono JSX)
 - TypeCheck
 
+## Memo
+
+https://github.com/spences10/sveltekit-mdsvex-starter-blog
+
 ## Hugo output (without dirs)
 
 https://github.com/akku1139/akku1139.github.io/actions/runs/11766616514/job/32774363867

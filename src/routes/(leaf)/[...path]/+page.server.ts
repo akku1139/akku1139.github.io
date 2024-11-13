@@ -6,6 +6,6 @@ export const entries = () => {
 
 export const load = ({ params }) => {
   return {
-    importPath: branch[params.path]
+    importPath: leaf[params.path]
   }
 }
