@@ -17,19 +17,19 @@ for(let page in rawPages) {
     case "_index.md":
       branch.push({
         file: page,
-        route: page.split("/").slice(0, -1).join("/")
+        route: page.split("/").slice(3, -1).join("/")
       })
       break
     case "index.md":
       leaf.push({
         file: page,
-        route: page.split("/").slice(0, -1).join("/")
+        route: page.split("/").slice(3, -1).join("/")
       })
       break
     default:
       leaf.push({
         file: page,
-        route: page.replace(/\.md$/, ""),
+        route: page.replace(/^\/src\/content\//, "").replace(/\.md$/, ""),
       })
       break
   }
