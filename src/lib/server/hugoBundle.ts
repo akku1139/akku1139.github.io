@@ -3,6 +3,7 @@ const rawPages = import.meta.glob("~/content/**/*.md")
 type HugoBundleFiles = Array<{
   file: string,
   route: string,
+  mod: () => any
 }>
 
 export let leaf: HugoBundleFiles = []
@@ -17,19 +18,22 @@ for(let page in rawPages) {
     case "_index.md":
       branch.push({
         file: page,
-        route: page.split("/").slice(3, -1).join("/")
+        route: page.split("/").slice(3, -1).join("/"),
+        mod: rawPages[page],
       })
       break
     case "index.md":
       leaf.push({
         file: page,
-        route: page.split("/").slice(3, -1).join("/")
+        route: page.split("/").slice(3, -1).join("/"),
+        mod: rawPages[page],
       })
       break
     default:
       leaf.push({
         file: page,
         route: page.replace(/^\/src\/content\//, "").replace(/\.md$/, ""),
+        mod: rawPages[page],
       })
       break
   }
