@@ -13,24 +13,23 @@ let importPath
 
 for(let page in rawPages) {
   spl = page.split("/")
-  importPath = "~raw" + page
 
   switch(spl[spl.length - 1]) {
     case "_index.md":
       branch.push({
-        file: importPath,
+        file: page,
         route: page.split("/").slice(3, -1).join("/")
       })
       break
     case "index.md":
       leaf.push({
-        file: importPath,
+        file: page,
         route: page.split("/").slice(3, -1).join("/")
       })
       break
     default:
       leaf.push({
-        file: importPath,
+        file: page,
         route: page.replace(/^\/src\/content\//, "").replace(/\.md$/, ""),
       })
       break
