@@ -13,7 +13,9 @@ type HugoBundleFiles = Array<{
 
 const pl = (path: string) => {
   const sp = path.split("/")
-  if (sp[0] === "blog") {
+  if (path === "blog") {
+    return path
+  } else if (sp[0] === "blog") {
     return sp[0] + "/" + sp[sp.length -1]
   } else {
     return path
