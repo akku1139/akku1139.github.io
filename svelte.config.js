@@ -10,7 +10,7 @@ const config = {
   preprocess: [
     vitePreprocess(),
     mdsvex(mdsvexConfig),
-  ]
+  ],
   kit: {
     // https://kit.svelte.jp/docs/adapter-static
     adapter: adapter({
