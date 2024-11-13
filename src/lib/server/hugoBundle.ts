@@ -37,5 +37,5 @@ for(let page in rawPages) {
   }
 }
 
-console.log("leaf:", leaf)
-console.log("branch:", branch)
+//console.log("leaf:", leaf)
+//console.log("branch:", branch)
