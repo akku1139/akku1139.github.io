@@ -1,6 +1,6 @@
 <script lang="ts">
   const { data } = $props();
-  const Content =
+  const { Content } = data
 </script>
 
 <Content />
