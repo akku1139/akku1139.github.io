@@ -13,6 +13,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - branch bundle
 - JSON-LD https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja
 - robots.txt
+- 404
 
 ## Issues
 
