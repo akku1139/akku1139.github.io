@@ -3,7 +3,9 @@ import { branch, leaf } from "$lib/server/hugoBundle.ts"
 const pages = [...branch, ...leaf]
 
 export const entries = () => {
-  return pages.map(f => f.route)
+  return pages.map(f => ({
+    path: f.route,
+  }))
 }
 
 export const load = async ({ params }) => {
