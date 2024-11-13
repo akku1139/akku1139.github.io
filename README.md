@@ -10,6 +10,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - RSS (Hono JSX)
 - Sitemap (Hono JSX)
 - TypeCheck
+- branch bundle
 
 ## Issues
 
