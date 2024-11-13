@@ -6,7 +6,9 @@ tags:
   - セキュリティ
 ---
 
+```js
 <script> document.getElementsByTagName('content')[0].textContent = 'Please disable JavaScript to view this site.'; </script>
+```
 
 元ネタ: [The WWWorst App Store - GNU](https://www.gnu.org/philosophy/wwworst-app-store.html)
 

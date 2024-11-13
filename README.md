@@ -11,6 +11,11 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Sitemap (Hono JSX)
 - TypeCheck
 
+## Issues
+
+- Moe counter, blogmura img with mdsvex-enhanced-images
+- blog nojavascript post
+
 ## Memo
 
 https://mdsvex.pngwn.io/docs

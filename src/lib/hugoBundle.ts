@@ -11,6 +11,15 @@ type HugoBundleFiles = Array<{
   mod: () => any
 }>
 
+const pl = (path: string) => {
+  const sp = path.split("/")
+  if (sp[0] === "blog") {
+    return sp[0] + "/" + sp[sp.length -1]
+  } else {
+    return path
+  }
+}
+
 export let leaf: HugoBundleFiles = []
 export let branch: HugoBundleFiles = []
 
@@ -23,21 +32,21 @@ for(let page in mdPages) {
     case "_index.md":
       branch.push({
         file: page,
-        route: page.split("/").slice(2, -1).join("/"),
+        route: pl(page.split("/").slice(2, -1).join("/")),
         mod: mdPages[page],
       })
       break
     case "index.md":
       leaf.push({
         file: page,
-        route: page.split("/").slice(2, -1).join("/"),
+        route: pl(page.split("/").slice(2, -1).join("/")),
         mod: mdPages[page],
       })
       break
     default:
       leaf.push({
         file: page,
-        route: page.replace(/^\/content\//, "").replace(/\.md$/, ""),
+        route: pl(page.replace(/^\/content\//, "").replace(/\.md$/, "")),
         mod: mdPages[page],
       })
       break
