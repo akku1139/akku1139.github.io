@@ -9,6 +9,7 @@ export const entries = () => {
 }
 
 export const load = async ({ params }) => {
+  console.log("load:", params.path)
   const page = await import(pages[params.path])
   return {
     Content: page.default,

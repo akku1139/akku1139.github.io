@@ -13,7 +13,7 @@ let importPath
 
 for(let page in rawPages) {
   spl = page.split("/")
-  importPath = "~raw/" + page
+  importPath = "~raw" + page
 
   switch(spl[spl.length - 1]) {
     case "_index.md":
