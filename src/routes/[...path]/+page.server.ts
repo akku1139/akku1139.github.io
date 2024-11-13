@@ -5,10 +5,10 @@ let brunch
 
 let spl
 
-for(page in rawPages) {
+for(let page in rawPages) {
   spl = page.split("/")
 
-  switch(spl[spl.lengh]) {
+  switch(spl[spl.length]) {
     case "_index.md":
 
     case "index.md":
@@ -18,4 +18,5 @@ for(page in rawPages) {
 }
 
 export const entries = () => {
+  return []
 }
