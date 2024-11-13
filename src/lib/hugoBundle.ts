@@ -3,7 +3,7 @@ const assets = import.meta.glob(["~/../content/**/*", "!~/../content/**/*.md"], 
   query: '?url',
   import: 'default',
 })
-console.log("assets:", assets)
+//console.log("assets:", assets)
 
 type HugoBundleFiles = Array<{
   file: string,

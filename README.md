@@ -8,14 +8,20 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - migrate from hugo
 - format, lint, auto fix (Pull Request)
 - RSS (Hono JSX)
-- Sitemap (Hono JSX)
+- Sitemap (Hono JSX) https://www.sitemaps.org/ja/protocol.html
 - TypeCheck
 - branch bundle
+- JSON-LD https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja
+- robots.txt
 
 ## Issues
 
 - Moe counter, blogmura img with mdsvex-enhanced-images
 - blog nojavascript post
+- MD assets (e.g. img) aren't loaded without enhancedImages(),
+- Error with dev
+- Error in https://ece87644.akku1139-github-io.pages.dev/blog/cachy-browser-google-search/ with js
+- Make high-resolution images the default
 
 ## Memo
 
