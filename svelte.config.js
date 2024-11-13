@@ -25,6 +25,7 @@ const config = {
     }),
     alias: {
       "~/*": "./src/*",
+      "~raw/*": "./*"
     }
   }
 }

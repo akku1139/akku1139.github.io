@@ -13,7 +13,19 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 
 ## Memo
 
+https://mdsvex.pngwn.io/docs
+
 https://github.com/spences10/sveltekit-mdsvex-starter-blog
+
+https://github.com/akku1139/hugo-bearhouse
+
+### remark-gfm vs remark-github
+
+https://github.com/orgs/remarkjs/discussions/1024
+
+https://github.com/remarkjs/remark-gfm
+
+https://github.com/remarkjs/remark-github
 
 ## Hugo output (without dirs)
 
