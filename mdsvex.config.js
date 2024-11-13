@@ -6,8 +6,14 @@
 //import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 
+//import { enhancedImages } from "mdsvex-enhanced-images"
+
 const config = defineConfig({
-	extensions: ['.svelte.md', '.md', '.svx'],
+  extensions: ['.svelte.md', '.md', '.svx'],
+
+  remarkPlugins: [
+//    enhancedImages,
+  ],
 
 //	smartypants: {
 //		dashes: 'oldschool'

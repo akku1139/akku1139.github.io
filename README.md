@@ -19,6 +19,8 @@ https://github.com/spences10/sveltekit-mdsvex-starter-blog
 
 https://github.com/akku1139/hugo-bearhouse
 
+https://svelte.dev/docs/kit/images
+
 ### remark-gfm vs remark-github
 
 https://github.com/orgs/remarkjs/discussions/1024
@@ -26,6 +28,8 @@ https://github.com/orgs/remarkjs/discussions/1024
 https://github.com/remarkjs/remark-gfm
 
 https://github.com/remarkjs/remark-github
+
+https://github.com/pngwn/MDsveX/issues/475
 
 ## Hugo output (without dirs)
 
