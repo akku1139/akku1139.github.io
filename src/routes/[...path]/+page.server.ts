@@ -12,7 +12,7 @@ export const entries = () => {
 
 export const load = async ({ params }) => {
   console.log("load:", params.path, routes[params.path])
-  const page = await import("~/.." + routes[params.path].file)
+  const page = await import("../../.." + routes[params.path].file)
   return {
     Content: page.default,
   }
