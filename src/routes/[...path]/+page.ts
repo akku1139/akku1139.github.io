@@ -11,8 +11,14 @@ export const entries = () => {
 }
 
 export const load = async ({ params }) => {
-  console.log("load:", params.path, routes[params.path])
-  const page = await routes[params.path].mod()
+  const path = params.path.replace(/\/$/, "")
+
+  console.log(
+    "load:", path,
+    //routes[path]
+  )
+
+  const page = await routes[path].mod()
   return {
     Content: page.default,
   }
