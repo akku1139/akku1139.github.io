@@ -17,3 +17,5 @@ export const load = async ({ params }) => {
     Content: page.default,
   }
 }
+
+// +page.server.ts
