@@ -9,7 +9,6 @@ export let leaf: HugoBundleFiles = []
 export let branch: HugoBundleFiles = []
 
 let spl
-let importPath
 
 for(let page in rawPages) {
   spl = page.split("/")
