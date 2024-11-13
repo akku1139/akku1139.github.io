@@ -1,8 +1,9 @@
-const mdPages = import.meta.glob("~/content/**/*.md")
-const assets = import.meta.glob(["~/content/**/*", "!~/content/**/*.md"], {
+const mdPages = import.meta.glob("~/../content/**/*.md")
+const assets = import.meta.glob(["~/../content/**/*", "!~/../content/**/*.md"], {
   query: '?url',
   import: 'default',
 })
+console.log(assets)
 
 type HugoBundleFiles = Array<{
   file: string,
@@ -22,21 +23,21 @@ for(let page in mdPages) {
     case "_index.md":
       branch.push({
         file: page,
-        route: page.split("/").slice(3, -1).join("/"),
+        route: page.split("/").slice(2, -1).join("/"),
         mod: mdPages[page],
       })
       break
     case "index.md":
       leaf.push({
         file: page,
-        route: page.split("/").slice(3, -1).join("/"),
+        route: page.split("/").slice(2, -1).join("/"),
         mod: mdPages[page],
       })
       break
     default:
       leaf.push({
         file: page,
-        route: page.replace(/^\/src\/content\//, "").replace(/\.md$/, ""),
+        route: page.replace(/^\/content\//, "").replace(/\.md$/, ""),
         mod: mdPages[page],
       })
       break
