@@ -1,4 +1,5 @@
 const rawPages = import.meta.glob("~/content/**/*.md")
+console.log(rawPages)
 
 type HugoBundleFiles = Array<{
   file: string,
