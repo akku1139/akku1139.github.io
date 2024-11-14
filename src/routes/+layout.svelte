@@ -2,7 +2,6 @@
   import "./global.css"
 
   let { children } = $props()
-  console.log("layout")
 </script>
 
 <header>

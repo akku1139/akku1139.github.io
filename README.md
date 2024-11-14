@@ -20,6 +20,10 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Dev server support?
 - Use farm?
 - Uninstall adapter-auto
+- Loading (link click)
+- style
+- Leaf title
+- .node-version support (actions) setup-node node-version-file
 
 ## Issues
 
@@ -31,7 +35,6 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Make high-resolution images the default
 - nojs page (onMount?)
 - title, description (meta)
-- routing not working???
 
 ## Memo
 

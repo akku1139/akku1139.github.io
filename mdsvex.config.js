@@ -1,4 +1,5 @@
 // https://github.com/mvasigh/sveltekit-mdsvex-blog/blob/34acd87ffbf26ad63b66efb169a76fbbc50c1b48/mdsvex.config.js
+import { join } from "node:path"
 
 //import remarkGithub from 'remark-github';
 //import remarkAbbr from 'remark-abbr';
@@ -14,6 +15,10 @@ const config = defineConfig({
   remarkPlugins: [
     enhancedImages,
   ],
+
+  // layout: {
+    // "": join(import.meta.dirname, "./src/layouts/leaf.svelte")
+  // }
 
 //	smartypants: {
 //		dashes: 'oldschool'
