@@ -1,8 +1,9 @@
 <script lang="ts">
-  let { data } = $props()
-  console.log("page start:", data)
+  console.log("page start", data)
+  const { data } = $props()
+  console.log("data:", data)
   // console.log("data (page):", data)
-  let { Content } = data
+  const { Content } = data
 
   let title = $derived(
     data.path === "" || data.meta.title === ""
