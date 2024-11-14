@@ -69,6 +69,9 @@ export const routes = Object.fromEntries(pages.map(page => [page.route, page]))
 pages.forEach(p => {
   const r = routes[p.route.split("/").slice(0, -1).join("/")]
   if(r.branch) {
+    if(r.route === p.route) {
+      return
+    }
     r.children.push(p)
   } else {
     throw new Error(`Leaf bundle has a subpage ${p.file}`)
