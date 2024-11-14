@@ -6,10 +6,7 @@ export let data
 
 <svelte:head>
   <title>
-    {#if
-      data.props.path === ""
-      || data.props.title === ""
-    }
+    {#if data.props.path === "" || data.props.title === ""}
       akku's website
     {:else}
       {data.props.meta.title} | akku's website
