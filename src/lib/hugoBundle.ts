@@ -3,14 +3,15 @@ const assets = import.meta.glob(["~/../content/**/*", "!~/../content/**/*.md"], 
   query: '?url',
   import: 'default',
 })
-//console.log("assets:", assets)
 
-type HugoBundleFiles = Array<{
+type HugoBundleFile = {
   file: string,
   route: string,
   mod: () => any,
   branch: boolean,
-}>
+  children: HugoBundleFiles
+}
+type HugoBundleFiles = Array<HugoBundleFile>
 
 const pl = (path: string) => {
   const sp = path.split("/")
@@ -38,6 +39,7 @@ for(let page in mdPages) {
         route: pl(page.split("/").slice(2, -1).join("/")),
         mod: mdPages[page],
         branch: true,
+        children: [],
       })
       break
     case "index.md":
@@ -46,6 +48,7 @@ for(let page in mdPages) {
         route: pl(page.split("/").slice(2, -1).join("/")),
         mod: mdPages[page],
         branch: false,
+        children: [],
       })
       break
     default:
@@ -54,10 +57,20 @@ for(let page in mdPages) {
         route: pl(page.replace(/^\/content\//, "").replace(/\.md$/, "")),
         mod: mdPages[page],
         branch: false,
+        children: [],
       })
       break
   }
 }
 
-//console.log("leaf:", leaf)
-//console.log("branch:", branch)
+export const pages = [...branch, ...leaf]
+export const routes = Object.fromEntries(pages.map(page => [page.route, page]))
+
+pages.forEach(p => {
+  const r = routes[p.route.split("/").slice(0, -1).join("/")]
+  if(r.branch) {
+    r.children.push(p)
+  } else {
+    throw new Error(`Leaf bundle has a subpage ${p.file}`)
+  }
+})

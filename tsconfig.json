@@ -13,6 +13,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
     "allowImportingTsExtensions": true,
+    // "lib": ["ESNext"],
     // "baseUrl": "./",
     // "paths": {
     //   "~/*": ["*"]

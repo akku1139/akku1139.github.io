@@ -1,8 +1,4 @@
-import { branch, leaf } from "$lib/hugoBundle.ts"
-
-const pages = [...branch, ...leaf]
-const routes = Object.fromEntries(pages.map(page => [page.route, page]))
-//console.log("routes:", routes)
+import { pages, routes } from "$lib/hugoBundle.ts"
 
 export const entries = () => {
   return pages.map(f => ({
@@ -12,13 +8,13 @@ export const entries = () => {
 
 export const load = async ({ params }) => {
   const path = params.path.replace(/\/$/, "")
-
-  const page = await routes[path].mod()
+  const route = routes[path]
+  const page = await route.mod()
   return {
     Content: page.default,
     meta: page.metadata,
     path,
+    children: route.children,
+    branch: route.branch,
   }
 }
-
-// +page.server.ts

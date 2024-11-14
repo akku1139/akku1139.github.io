@@ -14,3 +14,15 @@
 </svelte:head>
 
 <Content />
+
+<!-- Different from Bearcub -->
+{#if data.branch}
+<ul class="blog-posts">
+  {#each data.children as child}
+    <li>
+      <span><i><time datetime="{child.meta.date}" pubdate="">{child.meta.date}</time></i></span>
+      <a href="{child.route}">{child.meta.title}</a>
+    </li>
+  {/each}
+</ul>
+{/if}
