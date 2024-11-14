@@ -21,6 +21,7 @@
   "dependencies": {
     "@sveltejs/enhanced-img": "^0.3.10",
     "hono": "^4.6.10",
+    "html-minifier": "^4.0.0",
     "mdsvex": "^0.12.3",
     "mdsvex-enhanced-images": "^0.2.3"
   }
