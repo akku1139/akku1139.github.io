@@ -17,7 +17,7 @@ const config = defineConfig({
   ],
 
   layout: {
-    "": join(import.meta.dirname, "./src/layouts/default.svelte")
+    "_": join(import.meta.dirname, "./src/layouts/default.svelte")
   }
 
 //  smartypants: {

@@ -13,9 +13,11 @@ https://qiita.com/toshimin/items/5f13c3b4c28825219231
     ...md,
   }
 
-  const { children } = $props()
-
   console.log("md:", metadata)
+</script>
+
+<script lang="ts">
+  const { children } = $props()
 </script>
 
 {@render children()}
