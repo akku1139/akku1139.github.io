@@ -1,17 +1,10 @@
+import type { HugoBundleFiles } from "./types.ts"
+
 const mdPages = import.meta.glob("~/../content/**/*.md")
 const assets = import.meta.glob(["~/../content/**/*", "!~/../content/**/*.md"], {
   query: '?url',
   import: 'default',
 })
-
-type HugoBundleFile = {
-  file: string,
-  route: string,
-  mod: () => Promise<any>,
-  branch: boolean,
-  children: HugoBundleFiles
-}
-type HugoBundleFiles = Array<HugoBundleFile>
 
 const pl = (path: string) => {
   const sp = path.split("/")

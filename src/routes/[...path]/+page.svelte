@@ -1,4 +1,6 @@
 <script lang="ts">
+  import PostList from "$lib/postList.svelte"
+
   const { data } = $props()
   const Content = $derived(data.Content)
 
@@ -35,3 +37,7 @@
     {/each}
   {/if}
 </p>
+
+{#if data.branch}
+  <PostList posts={data.children} />
+{/if}
