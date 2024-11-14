@@ -14,8 +14,8 @@
 </svelte:head>
 
 <!-- is this reactive?-->
-{#if !data.branch}
-  <h1>{data.title}</h1>
+{#if !data.branch && data.path !== "" && data.meta.title}
+  <h1>{data.meta.title}</h1>
   <p class="byline"><time datetime="2024-04-04" pubdate="">2024-04-04</time></p>
 {/if}
 

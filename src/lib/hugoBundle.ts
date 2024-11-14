@@ -77,5 +77,3 @@ pages.forEach(p => {
     throw new Error(`Leaf bundle has a subpage ${p.file}`)
   }
 })
-
-console.log("routes:", routes)
