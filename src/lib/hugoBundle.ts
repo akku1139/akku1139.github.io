@@ -7,7 +7,7 @@ const assets = import.meta.glob(["~/../content/**/*", "!~/../content/**/*.md"], 
 type HugoBundleFile = {
   file: string,
   route: string,
-  mod: () => any,
+  mod: () => Promise<any>,
   branch: boolean,
   children: HugoBundleFiles
 }

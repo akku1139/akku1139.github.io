@@ -21,8 +21,8 @@
   {#each data.children as child}
     {#await child.mod then mod}
       <li>
-        <span><i><time datetime="{mod.metadata.date}" pubdate="">{mod.metadata.date}</time></i></span>
-        <a href="{child.route}">{mod.metadata.title}</a>
+        <!-- <span><i><time datetime="{mod.metadata.date}" pubdate="">{mod.metadata.date}</time></i></span> -->
+        <a href="{child.route}"><!-- {mod.metadata.title} -->{child.route}</a>
       </li>
     {/await}
   {/each}
