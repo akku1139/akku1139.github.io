@@ -1,8 +1,7 @@
 <script lang="ts">
 import "./global.css"
 
-let { data } = $props()
-// console.log("data (style)", data)
+console.log("layout")
 </script>
 
 <header>

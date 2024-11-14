@@ -1,5 +1,6 @@
 <script lang="ts">
   let { data } = $props()
+  console.log("page start:", data)
   // console.log("data (page):", data)
   let { Content } = data
 
@@ -8,6 +9,7 @@
       ? "akku's website"
       : `${data.meta.title} | akku's website`
   )
+  console.log("page end")
 </script>
 
 <svelte:head>
