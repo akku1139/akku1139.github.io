@@ -26,6 +26,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Error in https://ece87644.akku1139-github-io.pages.dev/blog/cachy-browser-google-search/ with js
 - Make high-resolution images the default
 - nojs page (onMount?)
+- title, description (meta)
 
 ## Memo
 

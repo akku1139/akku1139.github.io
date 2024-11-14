@@ -3,12 +3,12 @@ import "./global.css"
 
 export let data
 
+// Not reactive?
 let title
-
 if (data.props.path === "" || data.props.title === "") {
   title ="akku's website"
 } else {
-  title = `${data.props.meta.title} | akku's website
+  title = `${data.props.meta.title} | akku's website`
 }
 </script>
 
