@@ -1,5 +1,5 @@
-<script context="module" lang="ts">
+<script lang="ts">
   const { children } = $props()
 </script>
 
-<h2 id="{@render children()}">{@render children()}</h2>
+<h2 class="test" id="{children()}">{@render children()}</h2>
