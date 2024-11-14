@@ -16,7 +16,7 @@
 </svelte:head>
 
 <!-- is this reactive?-->
-{#if !data.branch && data.path !== "" && data.meta.title}
+{#if !data.branch && data.meta.title}
   <h1>{data.meta.title}</h1>
   <p class="byline">
     <time datetime="{data.date}" pubdate="">{data.date}</time>
@@ -38,6 +38,6 @@
   {/if}
 </p>
 
-{#if data.branch}
+{#if data.branch && data.path !== ""}
   <PostList posts={data.children} />
 {/if}

@@ -37,6 +37,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Make high-resolution images the default
 - nojs page (onMount?)
 - title, description (meta)
+- PostList many dependent components (cache or api)
 
 ## Memo
 

@@ -1,6 +1,14 @@
-export default '<?xml version="1.0" encoding="utf-8" standalone="yes"?>'
-  + <urlset>
+import { routes } from "$lib/hugoBundle.ts"
 
-    </urlset>
+const data = await Promise.all(routes[""].map(async r => {
+  return <>
+    <loc>https://.../{ r.route }</loc>
+    <lastmod>{ (await r.mod()).metadata.date }</lastmod>
+  </>
+}))
+
+
+export default '<?xml version="1.0" encoding="utf-8" standalone="yes"?>'
+  + <urlset>{ data }</urlset>
 
 // import.meta.env.BASE_URL
