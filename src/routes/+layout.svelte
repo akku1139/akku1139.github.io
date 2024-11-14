@@ -1,14 +1,14 @@
 <script lang="ts">
 import "./global.css"
 
-export let data
+const { data } = $props()
 
 // Not reactive?
 let title
-if (data.props.path === "" || data.props.title === "") {
+if (data.path === "" || data.meta.title === "") {
   title ="akku's website"
 } else {
-  title = `${data.props.meta.title} | akku's website`
+  title = `${data.meta.title} | akku's website`
 }
 </script>
 
