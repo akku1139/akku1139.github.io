@@ -1,5 +1,5 @@
 <script lang="ts">
-  console.log("page start", data)
+  console.log("page start")
   const { data } = $props()
   console.log("data:", data)
   // console.log("data (page):", data)

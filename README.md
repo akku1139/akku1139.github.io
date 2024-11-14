@@ -17,6 +17,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - tags
 - SEO
 - props must be let ?
+- Dev server support?
 
 ## Issues
 
