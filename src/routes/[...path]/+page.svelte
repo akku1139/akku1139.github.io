@@ -19,10 +19,12 @@
 {#if data.branch}
 <ul class="blog-posts">
   {#each data.children as child}
-    <li>
-      <span><i><time datetime="{child.meta.date}" pubdate="">{child.meta.date}</time></i></span>
-      <a href="{child.route}">{child.meta.title}</a>
-    </li>
+    {#await child.mod then mod}
+      <li>
+        <span><i><time datetime="{mod.metadata.date}" pubdate="">{mod.metadata.date}</time></i></span>
+        <a href="{child.route}">{mod.metadata.title}</a>
+      </li>
+    {/await}
   {/each}
 </ul>
 {/if}
