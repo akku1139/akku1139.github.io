@@ -2,14 +2,18 @@
 import "./global.css"
 
 const { data } = $props()
+console.log($props(), data)
 
+let title = "test"
+
+/*
 // Not reactive?
-let title
 if (data.path === "" || data.meta.title === "") {
   title ="akku's website"
 } else {
   title = `${data.meta.title} | akku's website`
 }
+*/
 </script>
 
 <svelte:head>
