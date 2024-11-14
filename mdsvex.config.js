@@ -16,9 +16,9 @@ const config = defineConfig({
     enhancedImages,
   ],
 
-  // layout: {
-    // "": join(import.meta.dirname, "./src/layouts/leaf.svelte")
-  // }
+  layout: {
+    "": join(import.meta.dirname, "./src/layouts/default.svelte")
+  }
 
 //  smartypants: {
 //    dashes: 'oldschool'

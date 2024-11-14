@@ -1,7 +1,7 @@
 <script lang="ts">
   import "./global.css"
 
-  let { children } = $props()
+  const { children } = $props()
 </script>
 
 <header>
