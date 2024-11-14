@@ -18,7 +18,7 @@
   <h1>{data.meta.title}</h1>
   <p class="byline">
     <time datetime="{data.date}" pubdate="">{data.date}</time>
-    {#if data.lastmod}
+    {#if data.lastmod !== ""}
       Last updated: <time datetime="{data.lastmod}" pubdate="">{data.lastmod}</time>
     {/if}
   </p>

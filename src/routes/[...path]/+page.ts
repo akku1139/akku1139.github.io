@@ -11,13 +11,14 @@ export const load = async ({ params }) => {
   const path = params.path.replace(/\/$/, "")
   const route = routes[path]
   const page = await route.mod()
+  const meta = page.metadata ?? {}
 
   return {
     Content: page.default,
-    meta: page.metadata,
+    meta,
     path,
-    date: yyyymmdd(page.metadata.date),
-    lastmod: page.metadata.lastmod && yyyymmdd(page.metadata.lastmod),
+    date: yyyymmdd(meta.date),
+    lastmod: yyyymmdd(meta.lastmod),
     children: route.children,
     branch: route.branch,
   }
