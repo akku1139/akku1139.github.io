@@ -3,7 +3,7 @@
   const { posts } = $props()
 </script>
 
-<ul class="blog-posts">
+<ul class="blog-posts" data-sveltekit-preload-data="tap">
   {#each posts as post}
     <!--
     {#await post.mod() then mod}
