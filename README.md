@@ -38,6 +38,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - title, description (meta)
 - PostList many dependent components (cache or api)
 - MDsveX custom component
+- lolify page list (hugoBundle.ts)
 
 ## Memo
 
