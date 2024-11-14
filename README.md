@@ -53,6 +53,9 @@ https://svelte.dev/docs/kit/images
 
 https://stackoverflow.com/questions/58606345/svelte-head-title-suffix
 
+ToC
+https://github.com/pngwn/MDsveX/discussions/268
+
 ### remark-gfm vs remark-github
 
 https://github.com/orgs/remarkjs/discussions/1024
