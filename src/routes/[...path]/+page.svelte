@@ -19,7 +19,7 @@
   <p class="byline">
     <time datetime="{data.date}" pubdate="">{data.date}</time>
     {#if data.lastmod !== ""}
-      Last updated: <time datetime="{data.lastmod}" pubdate="">{data.lastmod}</time>
+      (Last updated: <time datetime="{data.lastmod}" pubdate="">{data.lastmod}</time>)
     {/if}
   </p>
 {/if}
@@ -27,3 +27,11 @@
 <content>
   <Content />
 </content>
+
+<p>
+  {#if !data.branch}
+    {#each data.meta.tags as tag}
+      <a class="blog-tags" href="/tags/{tag}/">#{tag}</a>
+    {/each}
+  {/if}
+</p>
