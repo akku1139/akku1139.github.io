@@ -39,5 +39,5 @@
 </p>
 
 {#if data.branch && data.path !== ""}
-  <PostList posts={data.children} />
+  <PostList posts={data.childPages} />
 {/if}

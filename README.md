@@ -24,6 +24,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Code block highlight
 - lastmod
 - sort postlist
+- phony page (yt-stream etc...)
 
 ## Issues
 

@@ -5,6 +5,7 @@
 
 <ul class="blog-posts">
   {#each posts as post}
+    <!--
     {#await post.mod() then mod}
       <li>
         <span>
@@ -17,6 +18,17 @@
         <a href="/{ post.route }">{ mod.metadata.title }</a>
       </li>
     {/await}
+    -->
+    <li>
+      <span>
+        <i>
+          <time datetime="{ post.date }" pubdate>
+            { post.date }
+          </time>
+        </i>
+      </span>
+      <a href="/{ post.route }">{ post.title }</a>
+    </li>
   {:else}
     <li>
       No posts yet

@@ -3,7 +3,7 @@ import { pages } from "$lib/hugoBundle.ts"
 const data = await Promise.all(pages.map(async r => {
   const meta = (await r.mod()).metadata ?? {}
   return <url>
-    <loc>https://akku1139.github.io/{ r.route }</loc>
+    <loc>https://akku1139.github.io/{ r.route }/</loc>
     <lastmod>{ meta.date ?? new Date().toISOString() }</lastmod>
   </url>
 }))
