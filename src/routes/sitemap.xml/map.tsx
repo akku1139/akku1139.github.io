@@ -1,9 +1,10 @@
 import { pages } from "$lib/hugoBundle.ts"
 
 const data = await Promise.all(pages.map(async r => {
+  const meta = (await r.mod()).metadata ?? {}
   return <>
-    <loc>https://.../{ r.route }</loc>
-    <lastmod>{ (await r.mod()).metadata.date }</lastmod>
+    <loc>{ import.meta.env.VITE_BASE_URL }{ r.route }</loc>
+    <lastmod>{ meta.date ?? new Date().toISOString() }</lastmod>
   </>
 }))
 
