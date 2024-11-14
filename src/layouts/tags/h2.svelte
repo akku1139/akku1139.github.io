@@ -2,4 +2,4 @@
   const { children } = $props()
 </script>
 
-<h2 class="test" id="{children()}">{@render children()}</h2>
+<h2 class="test">{@render children()}</h2>

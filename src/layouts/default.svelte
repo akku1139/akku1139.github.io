@@ -10,8 +10,9 @@ https://github.com/pngwn/MDsveX/blob/f29f31c281c93a1f5e604ccc9f8e4cc14208a8d8/pa
 </script>
 
 <script module lang="ts">
-  import { h1, h2 } from "./tags"
-  export { h1, h2 }
+  // import { h1, h2 } from "./tags"
+  // export { h1, h2 }
+  export * from "./tags"
 
   //export const metadata = {
   //  ...props,
