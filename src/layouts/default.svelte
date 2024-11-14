@@ -5,6 +5,7 @@ https://qiita.com/toshimin/items/5f13c3b4c28825219231
 -->
 
 <script context="module" lang="ts">
+  import { h1, h2 } from "./tags"
   export * from "./tags"
 
   const md = metadata
@@ -13,6 +14,8 @@ https://qiita.com/toshimin/items/5f13c3b4c28825219231
   }
 
   const { children } = $props()
+
+  console.log("md:", metadata)
 </script>
 
 {@render children()}
