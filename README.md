@@ -16,6 +16,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - 404
 - tags
 - SEO
+- props must be let ?
 
 ## Issues
 
@@ -30,6 +31,8 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - routing not working???
 
 ## Memo
+
+https://svelte.dev/docs/svelte/v5-migration-guide
 
 https://mdsvex.pngwn.io/docs
 
