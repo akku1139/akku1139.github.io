@@ -2,16 +2,18 @@
 import "./global.css"
 
 export let data
+
+let title
+
+if (data.props.path === "" || data.props.title === "") {
+  title ="akku's website"
+} else {
+  title = `${data.props.meta.title} | akku's website
+}
 </script>
 
 <svelte:head>
-  <title>
-    {#if data.props.path === "" || data.props.title === ""}
-      akku's website
-    {:else}
-      {data.props.meta.title} | akku's website
-    {/if}
-  </title>
+  <title>{title}</title>
 </svelte:head>
 
 <header>
