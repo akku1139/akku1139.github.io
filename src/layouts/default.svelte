@@ -14,9 +14,11 @@ https://github.com/pngwn/MDsveX/blob/f29f31c281c93a1f5e604ccc9f8e4cc14208a8d8/pa
     ...md,
   }
 
-  const { children } = $props()
-
   console.log("md:", metadata)
+</script>
+
+<script lang="ts">
+  const { children } = $props()
 </script>
 
 {@render children()}
