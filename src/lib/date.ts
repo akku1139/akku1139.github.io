@@ -1,6 +1,6 @@
 // https://qiita.com/toshimin/items/5f13c3b4c28825219231
 export const yyyymmdd = (date: string | Date | undefined): string => {
-  if(date = void 0) {
+  if(date === void 0) {
     return ""
   }
 
