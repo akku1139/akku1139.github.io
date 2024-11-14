@@ -14,14 +14,14 @@ export const load = async ({ params }) => {
   let childPages = []
 
   if(branch) {
-    childPages = await Promise.all(route.children.map(async post => {
+    childPages = (await Promise.all(route.children.map(async post => {
       const mod = await post.mod()
       return {
         date: yyyymmdd(mod.metadata.date),
         title: mod.metadata.title,
         route: post.route,
       }
-    }))
+    }))).sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
   }
 
   return {

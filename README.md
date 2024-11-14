@@ -37,8 +37,9 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - nojs page (onMount?)
 - title, description (meta)
 - PostList many dependent components (cache or api)
-- MDsveX custom component
+- MDsveX custom component (use snipped?)
 - lolify page list (hugoBundle.ts)
+- new Date() vs Date.parse()
 
 ## Memo
 
