@@ -7,10 +7,6 @@
       ? "akku's website"
       : `${data.meta.title} | akku's website`
   )
-
-  $effect(() => {
-    console.log(data)
-  })
 </script>
 
 <svelte:head>
