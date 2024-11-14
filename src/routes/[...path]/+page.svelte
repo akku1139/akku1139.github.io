@@ -3,7 +3,11 @@
   const { data } = $props()
   console.log("data:", data)
   // console.log("data (page):", data)
-  const { Content } = data
+  let { Content } = data
+  $effect(() => {
+    Content  = data.Content
+  })
+
 
   const title = $derived(
     data.path === "" || data.meta.title === ""
