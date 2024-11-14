@@ -24,6 +24,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - style
 - Leaf title
 - .node-version support (actions) setup-node node-version-file
+- Code block highlight
 
 ## Issues
 

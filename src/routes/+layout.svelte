@@ -22,5 +22,7 @@
 </main>
 
 <footer>
--akku- | made with SvelteKit
+  <small>
+    -akku- | made with SvelteKit
+  </small>
 </footer>

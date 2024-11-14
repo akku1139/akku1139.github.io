@@ -16,7 +16,7 @@
 <!-- is this reactive?-->
 {#if !data.branch && data.path !== "" && data.meta.title}
   <h1>{data.meta.title}</h1>
-  <p class="byline"><time datetime="2024-04-04" pubdate="">2024-04-04</time></p>
+  <p class="byline"><time datetime="{data.meta.date}" pubdate="">{data.meta.date}</time></p>
 {/if}
 
 <content>
