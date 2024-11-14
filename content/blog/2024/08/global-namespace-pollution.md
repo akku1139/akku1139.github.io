@@ -34,11 +34,11 @@ Goでは (ほとんど知らないので一般的なHelloWorldを出します)
 package main
 
 import (
-	"fmt"
+  "fmt"
 )
 
 func main() {
-	fmt.Println("Hello World!")
+  fmt.Println("Hello World!")
 }
 ```
 

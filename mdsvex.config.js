@@ -20,29 +20,29 @@ const config = defineConfig({
     // "": join(import.meta.dirname, "./src/layouts/leaf.svelte")
   // }
 
-//	smartypants: {
-//		dashes: 'oldschool'
-//	},
+//  smartypants: {
+//    dashes: 'oldschool'
+//  },
 
-//	remarkPlugins: [
-//		[
-//			remarkGithub,
-//			{
-//				// TODO: Replace with your own repository
-//				repository: 'https://github.com/mvasigh/sveltekit-mdsvex-blog.git'
-//			}
-//		],
-//		remarkAbbr
-//	],
-//	rehypePlugins: [
-//		rehypeSlug,
-//		[
-//			rehypeAutolinkHeadings,
-//			{
-//				behavior: 'wrap'
-//			}
-//		]
-//	]
+//  remarkPlugins: [
+//    [
+//      remarkGithub,
+//      {
+//        // TODO: Replace with your own repository
+//        repository: 'https://github.com/mvasigh/sveltekit-mdsvex-blog.git'
+//      }
+//    ],
+//    remarkAbbr
+//  ],
+//  rehypePlugins: [
+//    rehypeSlug,
+//    [
+//      rehypeAutolinkHeadings,
+//      {
+//        behavior: 'wrap'
+//      }
+//    ]
+//  ]
 });
 
 export default config;
