@@ -21,6 +21,8 @@ export const load = async ({ params }) => {
   const page = await routes[path].mod()
   return {
     Content: page.default,
+    meta: page.metadata,
+    path,
   }
 }
 

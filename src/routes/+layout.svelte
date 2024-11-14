@@ -1,6 +1,21 @@
 <script lang="ts">
 import "./global.css"
+
+export let data
 </script>
+
+<svelte:head>
+  <title>
+    {#if
+      data.props.path === ""
+      || data.props.title === ""
+    }
+      akku's website
+    {:else}
+      {data.props.meta.title} | akku's website
+    {/if}
+  </title>
+</svelte:head>
 
 <header>
   <a class="skip-link" href="#main-content">Skip to main content</a>
