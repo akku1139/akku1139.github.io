@@ -16,7 +16,12 @@
 <!-- is this reactive?-->
 {#if !data.branch && data.path !== "" && data.meta.title}
   <h1>{data.meta.title}</h1>
-  <p class="byline"><time datetime="{data.meta.date}" pubdate="">{data.meta.date}</time></p>
+  <p class="byline">
+    <time datetime="{data.date}" pubdate="">{data.date}</time>
+    {#if data.lastmod}
+      Last updated: <time datetime="{data.lastmod}" pubdate="">{data.lastmod}</time>
+    {/if}
+  </p>
 {/if}
 
 <content>

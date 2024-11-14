@@ -7,11 +7,9 @@ https://github.com/pngwn/MDsveX/blob/f29f31c281c93a1f5e604ccc9f8e4cc14208a8d8/pa
 
 <script lang="ts">
   const { children, ...props} = $props()
-  console.log(children, props)
 </script>
 
 <script module lang="ts">
-  import { h1, h2 } from "./tags"
   export * from "./tags"
 
   //export const metadata = {
