@@ -8,12 +8,10 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - migrate from hugo
 - format, lint, auto fix (Pull Request)
 - RSS (Hono JSX)
-- Sitemap (Hono JSX) https://www.sitemaps.org/ja/protocol.html
+- Sitemap (Hono JSX) https://www.sitemaps.org/ja/protocol.html (tags)
 - TypeCheck
 - branch bundle
 - JSON-LD https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja
-- robots.txt
-- 404
 - tags
 - SEO
 - props must be let ?
@@ -25,6 +23,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - .node-version support (actions) setup-node node-version-file
 - Code block highlight
 - lastmod
+- sort postlist
 
 ## Issues
 
@@ -37,6 +36,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - nojs page (onMount?)
 - title, description (meta)
 - PostList many dependent components (cache or api)
+- MDsveX custom component
 
 ## Memo
 
