@@ -15,7 +15,7 @@ import "./global.css"
   </nav>
 </header>
 
-<main>
+<main id="main-content">
   <slot />
 </main>
 

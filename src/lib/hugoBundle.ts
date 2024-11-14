@@ -8,7 +8,8 @@ const assets = import.meta.glob(["~/../content/**/*", "!~/../content/**/*.md"], 
 type HugoBundleFiles = Array<{
   file: string,
   route: string,
-  mod: () => any
+  mod: () => any,
+  branch: boolean,
 }>
 
 const pl = (path: string) => {
@@ -36,6 +37,7 @@ for(let page in mdPages) {
         file: page,
         route: pl(page.split("/").slice(2, -1).join("/")),
         mod: mdPages[page],
+        branch: true,
       })
       break
     case "index.md":
@@ -43,6 +45,7 @@ for(let page in mdPages) {
         file: page,
         route: pl(page.split("/").slice(2, -1).join("/")),
         mod: mdPages[page],
+        branch: false,
       })
       break
     default:
@@ -50,6 +53,7 @@ for(let page in mdPages) {
         file: page,
         route: pl(page.replace(/^\/content\//, "").replace(/\.md$/, "")),
         mod: mdPages[page],
+        branch: false,
       })
       break
   }
