@@ -1,8 +1,8 @@
 <script lang="ts">
 import "./global.css"
 
-const props = $props()
-console.log(props)
+let { data } = $props()
+console.log("data (style)", data)
 
 let title = "test"
 

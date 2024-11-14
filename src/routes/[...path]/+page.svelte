@@ -1,5 +1,6 @@
 <script lang="ts">
-  const { data } = $props()
+  let { data } = $props()
+  console.log("data (page):", data)
   let { Content } = data
 </script>
 
