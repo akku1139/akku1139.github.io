@@ -11,7 +11,7 @@ import "./global.css"
     <a href="/works/">Works</a>
     <a href="/blog/">Blog</a>
     <a href="/contact/">Contact</a>
-    <a href="/index.xml">RSS</a>
+    <!-- <a href="/index.xml">RSS</a> -->
   </nav>
 </header>
 
