@@ -2,23 +2,8 @@
 import "./global.css"
 
 let { data } = $props()
-console.log("data (style)", data)
-
-let title = "test"
-
-/*
-// Not reactive?
-if (data.path === "" || data.meta.title === "") {
-  title ="akku's website"
-} else {
-  title = `${data.meta.title} | akku's website`
-}
-*/
+// console.log("data (style)", data)
 </script>
-
-<svelte:head>
-  <title>{title}</title>
-</svelte:head>
 
 <header>
   <a class="skip-link" href="#main-content">Skip to main content</a>

@@ -27,6 +27,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Make high-resolution images the default
 - nojs page (onMount?)
 - title, description (meta)
+- routing not working???
 
 ## Memo
 
