@@ -5,12 +5,17 @@
   // console.log("data (page):", data)
   const { Content } = data
 
-  let title = $derived(
+  const title = $derived(
     data.path === "" || data.meta.title === ""
       ? "akku's website"
       : `${data.meta.title} | akku's website`
   )
   console.log("page end")
+
+  $effect(() => {
+    console.log("data:", data)
+    console.log("content:", Content)
+  })
 </script>
 
 <svelte:head>

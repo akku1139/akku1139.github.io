@@ -1,7 +1,8 @@
 <script lang="ts">
-import "./global.css"
+  import "./global.css"
 
-console.log("layout")
+  let { children } = $props()
+  console.log("layout")
 </script>
 
 <header>
@@ -18,7 +19,7 @@ console.log("layout")
 </header>
 
 <main id="main-content">
-  <slot />
+  {@render children()}
 </main>
 
 <footer>
