@@ -56,4 +56,4 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 
 Let's click!
 
-[<RawImg src="https://b.blogmura.com/banner-blogmura-landscape.svg" alt="ブログランキング・にほんブログ村へ">](https://blogmura.com/ranking/in?p_cid=11191815)
+[<RawImg src="https://b.blogmura.com/banner-blogmura-landscape.svg" alt="ブログランキング・にほんブログ村へ" />](https://blogmura.com/ranking/in?p_cid=11191815)
