@@ -1,6 +1,5 @@
-import { pages, routes } from "$lib/hugoBundle.ts"
+import { pages, routes } from "$lib/server/hugoBundle.ts"
 import { yyyymmdd } from "$lib/date.ts"
-import { redirect } from '@sveltejs/kit';
 
 export const entries = () => {
   return pages.map(f => ({
@@ -11,10 +10,13 @@ export const entries = () => {
 export const load = async ({ params }) => {
   const path = params.path.replace(/\/$/, "")
   const route = routes[path]
-  if(route === void 0) {
-    // redirect(308, `/assets/${path}`)
-  }
+  const page = await route.mod()
+  const meta = page.metadata ?? {}
   const branch = route.branch
+
+  // if(route === void 0) {
+    // redirect(308, `/assets/${path}`)
+  // }
   let childPages = []
 
   if(branch) {
@@ -29,7 +31,13 @@ export const load = async ({ params }) => {
   }
 
   return {
+    file: route.file,
+    path,
+    meta,
+    branch,
     childPages,
     base: route.route.split("/").slice(-2, -1)?.[0],
+    date: yyyymmdd(meta.date),
+    lastmod: yyyymmdd(meta.lastmod),
   }
 }
