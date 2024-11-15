@@ -1,5 +1,6 @@
 import { pages, routes } from "$lib/hugoBundle.ts"
 import { yyyymmdd } from "$lib/date.ts"
+import { redirect } from '@sveltejs/kit';
 
 export const entries = () => {
   return pages.map(f => ({
@@ -10,6 +11,9 @@ export const entries = () => {
 export const load = async ({ params }) => {
   const path = params.path.replace(/\/$/, "")
   const route = routes[path]
+  if(route === void 0) {
+    redirect(308, `/assets/${path}`)
+  }
   const branch = route.branch
   let childPages = []
 
