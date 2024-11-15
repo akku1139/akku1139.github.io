@@ -1,7 +1,0 @@
-# Hugo
-.hugo_build.lock
-## output
-/public
-
-## hugo
-/bin
