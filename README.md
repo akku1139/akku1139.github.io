@@ -21,8 +21,10 @@
 - lolify page list (hugoBundle.ts) (server lib?)
 - new Date() vs Date.parse() and TimeZone
 - Illegal invocation with enhanced-image (first load page)
+  Uncaught (in promise) TypeError: 'get nextSibling' called on an object that does not implement interface Node.
 - phony page (yt-stream etc...) (Avoiding reload loops)
 - Dev server not working
+- code bloc color https://vscode.dev/github.com/akku1139/akku1139.github.io/blob/sveltekit/src/routes/global.css#L86
 
 ## Memo
 
