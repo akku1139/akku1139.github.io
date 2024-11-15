@@ -29,7 +29,7 @@
   <meta property="og:title" content={ data.meta.title ?? "akku's website" } />
   <meta property="og:description" content={ data.meta.summary ?? "akku's website" } />
   <meta property="og:type" content={ data.branch ? "website" : "article" } />
-  <meta property="og:url" content="/{ data.route }/" />
+  <meta property="og:url" content="/{ data.path }/" />
 
   <!-- <meta property="og:image" content="{{ $card.Permalink | absURL }}"/> -->
 

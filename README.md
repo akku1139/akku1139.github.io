@@ -35,7 +35,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - PostList many dependent components (cache or api)
 - MDsveX custom component (use snipped?)
 - lolify page list (hugoBundle.ts)
-- new Date() vs Date.parse()
+- new Date() vs Date.parse() and TimeZone
 - Illegal invocation with enhanced-image (first load page)
 
 ## Memo
@@ -66,6 +66,12 @@ https://github.com/remarkjs/remark-gfm
 https://github.com/remarkjs/remark-github
 
 https://github.com/pngwn/MDsveX/issues/475
+
+### OGP
+
+https://u-618.org/ogp%E3%81%A7meta%E3%81%AB%E6%9B%B8%E3%81%8F%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C/
+
+https://webtech.fukushimaku.jp/kiji/ogp-open-graph-protocol-knowledge.html
 
 ## Hugo output (without dirs)
 
