@@ -7,7 +7,7 @@
 <img width="315" height="100" enhanced="false" alt="Moe Counter" src="https://moe-counter.glitch.me/get/@akku1139.github.io?theme=rule34&darkmode=0" />
 ```
 
-![Moe Counter](/remote?url=https%3A%2F%2Fmoe-counter.glitch.me%2Fget%2F%40akku1139.github.io%3Ftheme%3Drule34%26darkmode%3D0)
+![Moe Counter](/remote/https%3A%2F%2Fmoe-counter.glitch.me%2Fget%2F%40akku1139.github.io%3Ftheme%3Drule34%26darkmode%3D0)
 
 ## Discord
 
@@ -60,4 +60,4 @@ Let's click!
 [![ブログランキング・にほんブログ村へ](https://b.blogmura.com/banner-blogmura-landscape.svg)](https://blogmura.com/ranking/in?p_cid=11191815)
 ```
 
-[![ブログランキング・にほんブログ村へ](/remote/?url=https%3A%2F%2Fb.blogmura.com%2Fbanner-blogmura-landscape.svg)](https://blogmura.com/ranking/in?p_cid=11191815)
+[![ブログランキング・にほんブログ村へ](/remote/https%3A%2F%2Fb.blogmura.com%2Fbanner-blogmura-landscape.svg)](https://blogmura.com/ranking/in?p_cid=11191815)
