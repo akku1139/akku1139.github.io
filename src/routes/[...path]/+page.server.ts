@@ -30,5 +30,6 @@ export const load = async ({ params }) => {
 
   return {
     childPages,
+    base: route.route.split("/").slice(-2, -1)?.[0],
   }
 }

@@ -14,12 +14,8 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - JSON-LD https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja
 - tags
 - SEO
-- props must be let ?
 - Dev server support?
 - Use farm?
-- Loading (link click)
-- style
-- Leaf title
 - .node-version support (actions) setup-node node-version-file
 - Code block highlight
 - lastmod
@@ -40,6 +36,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - MDsveX custom component (use snipped?)
 - lolify page list (hugoBundle.ts)
 - new Date() vs Date.parse()
+- Illegal invocation with enhanced-image (first load page)
 
 ## Memo
 
@@ -57,6 +54,8 @@ https://stackoverflow.com/questions/58606345/svelte-head-title-suffix
 
 ToC
 https://github.com/pngwn/MDsveX/discussions/268
+
+https://ics.media/entry/13324/
 
 ### remark-gfm vs remark-github
 

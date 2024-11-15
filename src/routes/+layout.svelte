@@ -4,6 +4,12 @@
   const { children } = $props()
 </script>
 
+<svelte:head>
+  <meta name="author" content="akku" />
+  <meta property="og:locale" content="ja_jp" />
+  <meta name="twitter:site" content="@akku1139" />
+</svelte:head>
+
 <header>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <a href="/" class="title"><h1>akku's website</h1></a>

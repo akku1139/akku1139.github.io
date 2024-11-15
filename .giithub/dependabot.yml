@@ -2,12 +2,12 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "./"
-    target-branch: sveltekit
+    target-branch: "sveltekit"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
 
   - package-ecosystem: "github-actions"
     directory: ".github/workflows/"
-    target-branch: sveltekit
+    target-branch: "sveltekit"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
