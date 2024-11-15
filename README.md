@@ -20,7 +20,6 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Code block highlight
 - lastmod
 - sort postlist
-- phony page (yt-stream etc...)
 
 ## Issues
 
@@ -37,6 +36,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - lolify page list (hugoBundle.ts)
 - new Date() vs Date.parse() and TimeZone
 - Illegal invocation with enhanced-image (first load page)
+- phony page (yt-stream etc...) (Avoiding reload loops)
 
 ## Memo
 
