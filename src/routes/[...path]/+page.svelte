@@ -63,7 +63,7 @@
   {#if data.meta.date}
     <meta itemprop="datePublished" content={ data.meta.date } />
   {/if}
-  {#if meta.lastmod}
+  {#if data.meta.lastmod}
     <meta itemprop="dateModified" content={ data.meta.lastmod } />
   {/if}
   <!-- <meta itemprop="wordCount" content="{{ .WordCount }}" /> -->
