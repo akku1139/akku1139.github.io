@@ -12,7 +12,7 @@ export const load = async ({ params }) => {
   const path = params.path.replace(/\/$/, "")
   const route = routes[path]
   if(route === void 0) {
-    redirect(308, `/assets/${path}`)
+    // redirect(308, `/assets/${path}`)
   }
   const branch = route.branch
   let childPages = []
