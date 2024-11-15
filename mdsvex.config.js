@@ -13,7 +13,7 @@ const config = defineConfig({
   extensions: ['.svelte.md', '.md', '.svx'],
 
   remarkPlugins: [
-    enhancedImages,
+//    enhancedImages,
   ],
 
   layout: {

@@ -1,5 +1,6 @@
 <script lang="ts">
   const { children } = $props()
+  const id = $state()
 </script>
 
-<h2 class="test">{@render children()}</h2>
+<h2 bind:innerHTML={id} {id}>{@render children()}</h2>
