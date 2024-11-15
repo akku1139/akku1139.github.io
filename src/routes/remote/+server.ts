@@ -6,4 +6,4 @@ export const GET = ({ url }) => {
   return fetch(target)
 }
 
-// export const prerender = true
+export const prerender = true
