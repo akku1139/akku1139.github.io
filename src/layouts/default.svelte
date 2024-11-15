@@ -7,6 +7,10 @@ https://github.com/pngwn/MDsveX/blob/f29f31c281c93a1f5e604ccc9f8e4cc14208a8d8/pa
 
 <script lang="ts">
   const { children, phony=false, ...props} = $props()
+
+  if(phony) {
+    onMount(() => location.reload())
+  }
 </script>
 
 <script module lang="ts">
@@ -20,10 +24,6 @@ https://github.com/pngwn/MDsveX/blob/f29f31c281c93a1f5e604ccc9f8e4cc14208a8d8/pa
   //export const metadata = {
   //  ...props,
   //}
-
-  if(phony) {
-    onMount(() => location.reload())
-  }
 </script>
 
 {#if children}
