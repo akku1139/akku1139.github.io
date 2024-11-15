@@ -1,4 +1,4 @@
-import { pages } from "$lib/hugoBundle.ts"
+import { pages } from "$lib/server/hugoBundle.ts"
 
 const data = await Promise.all(pages.map(async r => {
   const meta = (await r.mod()).metadata ?? {}
