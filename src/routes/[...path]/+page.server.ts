@@ -1,4 +1,4 @@
-import { pages, routes } from "$lib/server/hugoBundle.ts"
+import { pages, routes } from "$lib/hugoBundle.ts"
 import { yyyymmdd } from "$lib/date.ts"
 
 export const entries = () => {
@@ -31,7 +31,6 @@ export const load = async ({ params }) => {
   }
 
   return {
-    file: route.file,
     path,
     meta,
     branch,
