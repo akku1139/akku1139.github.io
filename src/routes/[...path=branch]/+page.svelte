@@ -69,4 +69,9 @@
 
 {#if data.path !== ""}
   <PostList posts={data.childPages} />
+  <div>
+    {#each data.tags as tag}
+      <a class="blog-tags" href="/tags/{tag}">#{ tag }</a>
+    {/each}
+  </div>
 {/if}

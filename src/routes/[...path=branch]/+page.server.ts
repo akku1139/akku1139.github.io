@@ -1,4 +1,5 @@
 import { branch, routes } from "$lib/hugoBundle.ts"
+import { tags } from "$lib/server/tags.ts"
 import { yyyymmdd } from "$lib/date.ts"
 
 export const entries = () => {
@@ -27,6 +28,7 @@ export const load = async ({ params }) => {
   return {
     path,
     meta,
+    tags,
     childPages,
     base: route.route.split("/").slice(-2, -1)?.[0],
     date: yyyymmdd(meta.date),

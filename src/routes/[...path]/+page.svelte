@@ -89,6 +89,6 @@
 
 <p>
   {#each data.meta.tags as tag}
-    <a class="blog-tags" href="/tags/{tag}/">#{tag}</a>
+    <a class="blog-tags" href="/tags/{tag.toLowerCase()}/">#{tag.toLowerCase()}</a>
   {/each}
 </p>
