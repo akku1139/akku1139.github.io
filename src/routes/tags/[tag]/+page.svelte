@@ -61,10 +61,6 @@
   <!-- Output all taxonomies as schema.org keywords -->
 </svelte:head>
 
-<content>
-  <Content />
-</content>
-
 {#if data.path !== ""}
   <PostList posts={data.childPages} />
 {/if}

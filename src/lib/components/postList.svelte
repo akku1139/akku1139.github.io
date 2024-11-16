@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { yyyymmdd } from "./date.ts"
+  import { yyyymmdd } from "$lib/date.ts"
   const { posts } = $props()
 </script>
 
