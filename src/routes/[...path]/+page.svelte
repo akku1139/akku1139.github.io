@@ -1,6 +1,4 @@
 <script lang="ts">
-  import PostList from "$lib/postList.svelte"
-
   const { data } = $props()
   const Content = $derived(data.Content)
 
@@ -28,21 +26,19 @@
   <!-- Source: https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/opengraph.html -->
   <meta property="og:title" content={ data.meta.title ?? "akku's website" } />
   <meta property="og:description" content={ data.meta.summary ?? "akku's website" } />
-  <meta property="og:type" content={ data.branch ? "website" : "article" } />
+  <meta property="og:type" content="article" />
   <meta property="og:url" content="/{ data.path }/" />
 
   <!-- <meta property="og:image" content="{{ $card.Permalink | absURL }}"/> -->
 
-  {#if !data.branch }
-    {#if data.base }
-      <meta property="article:section" content={ data.base } />
-    {/if}
-    {#if data.meta.date}
-      <meta property="article:published_time" content={ data.meta.date } />
-    {/if}
-    {#if data.meta.lastmod}
-      <meta itemprop="article:modified_time" content={ data.meta.lastmod } />
-    {/if}
+  {#if data.base }
+    <meta property="article:section" content={ data.base } />
+  {/if}
+  {#if data.meta.date}
+    <meta property="article:published_time" content={ data.meta.date } />
+  {/if}
+  {#if data.meta.lastmod}
+    <meta itemprop="article:modified_time" content={ data.meta.lastmod } />
   {/if}
 
   <!-- {{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }} -->
@@ -71,13 +67,13 @@
   <!-- <meta itemprop="image" content="{{ $card.Permalink | absURL }}" /> -->
 
   <!-- Output all taxonomies as schema.org keywords -->
-  {#if !data.branch && data.meta.tags}
+  {data.meta.tags}
     <meta itemprop="keywords" content={ keywords } />
   {/if}
 </svelte:head>
 
 <!-- is this reactive?-->
-{#if !data.branch && data.meta.title}
+{#if data.meta.title}
   <h1>{data.meta.title}</h1>
   <p class="byline">
     <time datetime="{data.date}" pubdate="">{data.date}</time>
@@ -92,13 +88,7 @@
 </content>
 
 <p>
-  {#if !data.branch}
-    {#each data.meta.tags as tag}
-      <a class="blog-tags" href="/tags/{tag}/">#{tag}</a>
-    {/each}
-  {/if}
+  {#each data.meta.tags as tag}
+    <a class="blog-tags" href="/tags/{tag}/">#{tag}</a>
+  {/each}
 </p>
-
-{#if data.branch && data.path !== ""}
-  <PostList posts={data.childPages} />
-{/if}

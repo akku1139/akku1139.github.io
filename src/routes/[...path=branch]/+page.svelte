@@ -27,7 +27,11 @@
   <meta property="og:title" content={ data.meta.title ?? "akku's website" } />
   <meta property="og:description" content={ data.meta.summary ?? "akku's website" } />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/{ data.path }/" />
+  {#if data.path === ""}
+    <meta property="og:url" content="/" />
+  {:else}
+    <meta property="og:url" content="/{ data.path }/" />
+  {/if}
 
   <!-- <meta property="og:image" content="{{ $card.Permalink | absURL }}"/> -->
 
