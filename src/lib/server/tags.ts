@@ -11,7 +11,7 @@ export const tag = {
 export const tags = Array.from(new Set(await Promise.all(leaf.map(async p => {
   const mod = await p.mod()
   const meta = mod.metadata ?? {}
-  const t = meta.tags
+  const t = meta.tags ?? []
   t.forEach(u => {
     const r = u.toLowerCase()
     if(!tag[r]) {
