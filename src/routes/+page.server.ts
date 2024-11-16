@@ -9,8 +9,7 @@ export const entries = () => {
 }
 
 export const load = async ({ params }) => {
-  const path = params.path.replace(/\/$/, "")
-  const route = routes[path]
+  const route = routes[""]
   const page = await route.mod()
   const meta = page.metadata ?? {}
 

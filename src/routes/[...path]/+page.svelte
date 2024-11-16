@@ -26,7 +26,6 @@
   <!-- Source: https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/opengraph.html -->
   <meta property="og:title" content={ data.meta.title ?? "akku's website" } />
   <meta property="og:description" content={ data.meta.summary ?? "akku's website" } />
-  <meta property="og:type" content="article" />
   <meta property="og:url" content="/{ data.path }/" />
 
   <!-- <meta property="og:image" content="{{ $card.Permalink | absURL }}"/> -->

@@ -1,6 +1,4 @@
 <script lang="ts">
-  import PostList from "$lib/components/postList.svelte"
-
   const { data } = $props()
   const Content = $derived(data.Content)
 
@@ -9,8 +7,6 @@
       ? "akku's website"
       : `${data.meta.title} | akku's website`
   )
-
-  const keywords = [] // all tags
 </script>
 
 <svelte:head>
@@ -26,7 +22,6 @@
   <!-- Source: https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/opengraph.html -->
   <meta property="og:title" content={ data.meta.title ?? "akku's website" } />
   <meta property="og:description" content={ data.meta.summary ?? "akku's website" } />
-  <meta property="og:type" content="website" />
   <meta property="og:url" content="/{ data.path }/" />
 
   <!-- <meta property="og:image" content="{{ $card.Permalink | absURL }}"/> -->
@@ -57,18 +52,6 @@
   <!-- <meta itemprop="image" content="{{ $card.Permalink | absURL }}" /> -->
 
   <!-- Output all taxonomies as schema.org keywords -->
-  <meta itemprop="keywords" content={ data.keywords } />
 </svelte:head>
 
-<content>
-  <content>
-    <Content />
-  </content>
-
-  <PostList posts={data.childPages} />
-  <div>
-    {#each data.tags as tag}
-      <a class="blog-tags" href="/tags/{tag}">#{ tag }</a> { " " }
-    {/each}
-  </div>
-</content>
+<Content />
