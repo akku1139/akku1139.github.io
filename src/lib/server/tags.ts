@@ -20,4 +20,4 @@ export const tags = Array.from(new Set(await Promise.all(leaf.map(async p => {
     tag[r].posts.push(p)
   })
   return t
-})).map(v => v.toLowerCase()).flat()))
+})))).map(v => v.toLowerCase()).flat()
