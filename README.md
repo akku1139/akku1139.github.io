@@ -25,6 +25,7 @@
 - phony page (yt-stream etc...) (Avoiding reload loops)
 - Dev server not working
 - code bloc color https://vscode.dev/github.com/akku1139/akku1139.github.io/blob/sveltekit/src/routes/global.css#L86
+- fallback description
 
 ## Memo
 
