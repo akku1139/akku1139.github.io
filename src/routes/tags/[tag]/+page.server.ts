@@ -1,11 +1,10 @@
 import { tag, tags } from "$lib/server/tags.ts"
 import { yyyymmdd } from "$lib/date.ts"
 
-console.log("tag:", tag)
-console.log("tags:", tags)
-
 export const entries = () => {
-  return tags
+  return tags.map(f => ({
+    tag: f,
+  }))
 }
 
 export const load = async ({ params }) => {
