@@ -1,14 +1,8 @@
-import { pages, routes } from "$lib/hugoBundle.ts"
+import { routes } from "$lib/hugoBundle.ts"
 import { tags } from "$lib/server/tags.ts"
 import { yyyymmdd } from "$lib/date.ts"
 
-export const entries = () => {
-  return pages.map(f => ({
-    path: f.route,
-  }))
-}
-
-export const load = async ({ params }) => {
+export const load = async () => {
   const route = routes[""]
   const page = await route.mod()
   const meta = page.metadata ?? {}
