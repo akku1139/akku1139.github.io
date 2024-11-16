@@ -10,7 +10,7 @@ export const tag = {
 
 export const tags = Array.from(
   new Set(
-    await Promise.all(
+    (await Promise.all(
       leaf.map(async p => {
         const mod = await p.mod()
         const meta = mod.metadata ?? {}
@@ -24,6 +24,6 @@ export const tags = Array.from(
         })
         return t.map(y => y.toLowerCase())
       })
-    )
+    )).flat()
   )
-).flat()
+)
