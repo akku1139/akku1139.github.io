@@ -29,6 +29,7 @@ export const load = async ({ params }) => {
     path,
     meta,
     tags,
+    keywords: tags.join(",")+",",
     childPages,
     base: route.route.split("/").slice(-2, -1)?.[0],
     date: yyyymmdd(meta.date),
