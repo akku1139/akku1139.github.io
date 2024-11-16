@@ -13,7 +13,7 @@ export default '<?xml version="1.0" encoding="utf-8" standalone="yes"?>'
   + <urlset>{[
     ...data,
     tags.map(t => <url>
-      <loc>https://akku1139.github.io/tags/{ t }/</loc>
+      <loc>https://akku1139.github.io/tags/{ encodeURIComponent(t) }/</loc>
       <lastmod>{ new Date().toISOString() }</lastmod>
     </url>)
   ]}</urlset>
