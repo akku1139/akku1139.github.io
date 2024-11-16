@@ -1,4 +1,6 @@
 <script lang="ts">
+  import PostList from "$lib/components/postList.svelte"
+
   const { data } = $props()
   const Content = $derived(data.Content)
 
@@ -54,4 +56,8 @@
   <!-- Output all taxonomies as schema.org keywords -->
 </svelte:head>
 
-<Content />
+<content>
+  <Content />
+</content>
+
+<PostList posts={data.childPages} />
