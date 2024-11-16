@@ -67,7 +67,7 @@
   <!-- <meta itemprop="image" content="{{ $card.Permalink | absURL }}" /> -->
 
   <!-- Output all taxonomies as schema.org keywords -->
-  {data.meta.tags}
+  {#if data.meta.tags}
     <meta itemprop="keywords" content={ keywords } />
   {/if}
 </svelte:head>
