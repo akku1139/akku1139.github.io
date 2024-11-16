@@ -26,4 +26,4 @@ export const tags = Array.from(
       })
     )).flat()
   )
-)
+).sort()

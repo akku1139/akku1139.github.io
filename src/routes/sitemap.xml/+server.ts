@@ -1,6 +1,6 @@
 import map from "./map.tsx"
 
-export const GET = ({ url }) => {
+export const GET = () => {
   return new Response(map)
 }
 
