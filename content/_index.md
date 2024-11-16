@@ -2,7 +2,7 @@
 ---
 
 <script lang="ts">
-  import RawImg from "$lib/rawImg.svelte"
+  import RawImg from "$lib/components/rawImg.svelte"
 </script>
 
 やぁ

@@ -89,7 +89,7 @@ code {
 
 pre code {
   display: block;
-  padding: 20px;
+  /* padding: 20px; conflict with prism theme */
   white-space: pre-wrap;
   font-size: 14px;
   overflow-x: auto;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PostList from "$lib/postList.svelte"
+  import PostList from "$lib/components/postList.svelte"
 
   const { data } = $props()
   const Content = $derived(data.Content)
