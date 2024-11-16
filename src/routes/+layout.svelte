@@ -1,6 +1,6 @@
 <script lang="ts">
   import "./global.css"
-  import "prism-themes/themes/prism-themes"
+  import "prism-themes/themes/prism-dracula.css"
 
   const { children } = $props()
 </script>
