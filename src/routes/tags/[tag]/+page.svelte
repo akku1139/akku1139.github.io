@@ -4,15 +4,11 @@
   const { data } = $props()
   const Content = $derived(data.Content)
 
-  const title = $derived(
-    data.title
-  )
-
   const keywords = [] // all tags
 </script>
 
 <svelte:head>
-  <title>{title}</title>
+  <title>{data.name}</title>
 
   <!-- https://github.com/akku1139/hugo-bearhouse/blob/3f4f722ae27a73baa8650ce97255b2807db80768/layouts/partials/seo_tags.html -->
   <!-- Primary Meta Tags -->
@@ -61,6 +57,7 @@
   <!-- Output all taxonomies as schema.org keywords -->
 </svelte:head>
 
-{#if data.path !== ""}
+<content>
+  <h3 class="blog-filter">Filtering for "{ data.name }"</h3>
   <PostList posts={data.childPages} />
-{/if}
+</content>
