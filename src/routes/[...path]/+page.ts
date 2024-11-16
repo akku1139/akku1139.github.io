@@ -1,4 +1,5 @@
 import { routes } from "$lib/hugoBundle.ts"
+import { yyyymmdd } from "$lib/date.ts"
 
 export const load = async ({ params }) => {
   const path = params.path.replace(/\/$/, "")
