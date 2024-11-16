@@ -1,6 +1,6 @@
 import { routes } from "$lib/hugoBundle.ts"
 
-export const load = async ({ data }) => {
+export const load = async ({ params, data }) => {
   const path = params.path.replace(/\/$/, "")
   const route = routes[path]
   const page = await route.mod()
