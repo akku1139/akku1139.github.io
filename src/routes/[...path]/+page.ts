@@ -1,6 +1,6 @@
 import { routes } from "$lib/hugoBundle.ts"
 
-export const load = async ({ params, data }) => {
+export const load = async ({ params }) => {
   const path = params.path.replace(/\/$/, "")
   const route = routes[path]
   const page = await route.mod()
@@ -34,3 +34,4 @@ export const load = async ({ params, data }) => {
     Content: page.default,
   }
 }
+whalebird
