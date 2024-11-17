@@ -3,15 +3,12 @@
 ## TODOs
 
 - format, lint, auto fix (Pull Request)
-- RSS (Hono JSX)
-- Sitemap (Hono JSX) https://www.sitemaps.org/ja/protocol.html (tags)
 - TypeCheck
 - JSON-LD https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja
-- tags
 - Use farm?
 - Code block highlight
-- lastmod
 - sort postlist
+- site config (json, ts, yaml, toml)
 
 ## Issues
 
@@ -24,7 +21,7 @@
   Uncaught (in promise) TypeError: 'get nextSibling' called on an object that does not implement interface Node.
 - phony page (yt-stream etc...) (Avoiding reload loops)
 - Dev server not working
-- code bloc color https://vscode.dev/github.com/akku1139/akku1139.github.io/blob/sveltekit/src/routes/global.css#L86
+- code block color https://vscode.dev/github.com/akku1139/akku1139.github.io/blob/sveltekit/src/routes/global.css#L86
 - fallback description
 
 ## Memo
