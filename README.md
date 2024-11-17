@@ -23,6 +23,7 @@
 - Dev server not working
 - code block color https://vscode.dev/github.com/akku1139/akku1139.github.io/blob/sveltekit/src/routes/global.css#L86
 - fallback description
+- RSS child branch
 
 ## Memo
 
