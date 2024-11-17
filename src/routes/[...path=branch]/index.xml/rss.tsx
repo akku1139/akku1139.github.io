@@ -40,7 +40,7 @@ export default async (params) => {
           {/* {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }} */}
           <guid>https://akku1139.github.io/{ page.route === "" ? "" : (page.route + "/") }</guid>
           <description>{}</description>
-          <content:encoded>{"<![CDATA[" + page.mod.render().html + "]]>" }</content:encoded>
+          <content:encoded>{"<![CDATA[" + page.mod.default.render().html + "]]>" }</content:encoded>
         </item>) }
       </channel>
     </rss>
