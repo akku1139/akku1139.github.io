@@ -1,6 +1,9 @@
 import { routes } from "$lib/hugoBundle.ts"
 
-export default async (params) => {
+export const prerender = true
+export const trailingSlash = "never"
+
+export const GET = async ({ params }) => {
   const path = params.path.replace(/\/$/, "")
   const route = routes[path]
   const page = await route.mod()
@@ -15,7 +18,8 @@ export default async (params) => {
     }
   }))).sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
 
-  return "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" +
+  return new Response(
+    "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" +
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
       <channel>
         <title>akku's website</title>
@@ -42,4 +46,5 @@ export default async (params) => {
         </item>) }
       </channel>
     </rss>
+  )
 }
