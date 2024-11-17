@@ -10,6 +10,7 @@ export default async (params) => {
 
   childPages = (await Promise.all(route.children.map(async post => {
     const mod = await post.mod()
+    console.log("mod: ", mod, mod.default)
     return {
       mod,
       meta: mod.metadata,
