@@ -11,6 +11,7 @@ export default async ({ params }) => {
   childPages = (await Promise.all(route.children.map(async post => {
     const mod = await post.mod()
     return {
+      mod,
       meta: mod.metadata,
       route: post.route,
     }
@@ -39,7 +40,7 @@ export default async ({ params }) => {
           {/* {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }} */}
           <guid>https://akku1139.github.io/{ page.route === "" ? "" : (page.route + "/") }</guid>
           <description>{}</description>
-          <content:encoded>{"<![CDATA[" + "]]>" }</content:encoded>
+          <content:encoded>{"<![CDATA[" + mod.render.html + "]]>" }</content:encoded>
         </item>) }
       </channel>
     </rss>
