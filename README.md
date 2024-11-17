@@ -24,6 +24,7 @@
 - code block color https://vscode.dev/github.com/akku1139/akku1139.github.io/blob/sveltekit/src/routes/global.css#L86
 - fallback description
 - RSS child branch
+- `https://akku1139.github.io//` in sitemap.xml
 
 ## Memo
 
@@ -43,6 +44,12 @@ ToC
 https://github.com/pngwn/MDsveX/discussions/268
 
 https://ics.media/entry/13324/
+
+### Compoentn to html
+
+https://svelte.dev/docs/svelte/legacy-component-api#Server-side-component-API
+
+https://github.com/sveltejs/svelte/blob/f8362fe5fb1ca86521970123aa2b024ec482c086/test/server-side-rendering/index.js#L62
 
 ### remark-gfm vs remark-github
 

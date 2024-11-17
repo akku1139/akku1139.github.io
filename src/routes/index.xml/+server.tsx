@@ -1,11 +1,20 @@
-import { routes } from "$lib/hugoBundle.ts"
+import { leaf } from "$lib/hugoBundle.ts"
 
 export const prerender = true
 export const trailingSlash = "never"
 
-export const GET = async ({ params }) => {
-  const path = params.path.replace(/\/$/, "")
-  const route = routes[path]
+export const GET = async () => {
+  await Promise.all(leaf.map(async page => {
+    return <item>
+      <title>{ page.meta.title }</title>
+      <link>https://akku1139.github.io/{ page.route === "" ? "" : (page.route + "/") }</link>
+      <pubDate>{ page.meta.date }</pubDate>
+      {/* {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }} */}
+      <guid>https://akku1139.github.io/{ page.route === "" ? "" : (page.route + "/") }</guid>
+      <description>{}</description>
+      <content:encoded>{"<![CDATA[" + page.mod.default /*.render().html*/ + "]]>" }</content:encoded>
+    </item>
+  }))
 
   const childPages = (await Promise.all(route.children.map(async post => {
     const mod = await post.mod()
@@ -33,15 +42,7 @@ export const GET = async ({ params }) => {
         <copyright>-akku-</copyright>
         <lastBuildDate>{ new Date().toISOString() }</lastBuildDate>
         <atom:link href="https://akku1139.github.io/index.xml" rel="self" type="application/rss+xml"/>
-        { childPages.map(page => <item>
-          <title>{ page.meta.title }</title>
-          <link>https://akku1139.github.io/{ page.route === "" ? "" : (page.route + "/") }</link>
-          <pubDate>{ page.meta.date }</pubDate>
-          {/* {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }} */}
-          <guid>https://akku1139.github.io/{ page.route === "" ? "" : (page.route + "/") }</guid>
-          <description>{}</description>
-          <content:encoded>{"<![CDATA[" + page.mod.default /*.render().html*/ + "]]>" }</content:encoded>
-        </item>) }
+        {  }
       </channel>
     </rss>
   )
