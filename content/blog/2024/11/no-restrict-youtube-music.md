@@ -38,7 +38,7 @@ window.addEventListener("visibilitychange", (e) => {
 
 [GitHub Gistで見る](https://gist.github.com/akku1139/29133fcecf9bbb981908fed7ab4bad5f)
 
-ユーザースクリプトのインストール方法は[過去の記事](/blog/discord-cat/#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E7%89%88%E3%81%AE%E5%85%A5%E3%82%8C%E6%96%B9)を参照してください。
+ユーザースクリプトのインストール方法は[過去の記事](/blog/discord-cat/#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E7%89%88%E3%81%AE%E5%85%A5%E3%82%8C%E6%96%B9/)を参照してください。
 
 ## 他に
 
