@@ -9,6 +9,7 @@
 - Code block highlight
 - sort postlist
 - site config (json, ts, yaml, toml)
+- https://www.npmjs.com/package/remark-heading-id
 
 ## Issues
 
