@@ -4,11 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - hugo.toml
       - content/**
+      - src/**
       - static/**
-      - themes/**
-      - layouts/**
 
 concurrency:
   group: pages
@@ -21,54 +19,46 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.136.3
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          submodules: recursive
+          node-version-file: ./.node-version
 
-      - name: Update Submodules 
-        run: git submodule update --remote
+      # - name: Setup Pages
+      #   id: pages
+      #   uses: actions/configure-pages@v4
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-
-      - name: Cache bin
-        id: cache-bin
+      - name: Cache Dependencies
+        id: cache-deps
         uses: actions/cache@v4
         with:
-          path: ./bin
-          key: bin-cache-hugo-${{ env.HUGO_VERSION }}
+          path: |
+            ./node_modules
+            ~/.npm
+          key: npm-cache-${{ hashFiles('./package-lock.json') }}
 
-      - name: Setup Hugo
-        if: steps.cache-bin.outputs.cache-hit != 'true'
-        run: |
-          wget --no-verbose -O ${{ runner.temp }}/hugo.tar.gz \
-            https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.tar.gz &&
-          mkdir -p bin &&
-          tar zxvf ${{ runner.temp }}/hugo.tar.gz -C ./bin/
+      - name: Install Dependencies
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: npm i
 
       - name: Cache resources
         uses: actions/cache@v4
         with:
-          path: ./resources
+          path: ./.svelte-kit
           key: resources-cache-${{ github.sha }}
           restore-keys: resources-cache-
 
       - name: Build
-        run: |
-          ./bin/hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: node --run build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./public/"
+          path: "./dist/"
 
   deploy:
     needs: build
@@ -83,5 +73,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Send ping to blogmura
+      - name: Ping to blogmura
         run: "curl ${{ secrets.BLOGMURA_PING_URL }}"

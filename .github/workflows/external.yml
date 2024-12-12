@@ -1,11 +1,11 @@
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '27 3 * * *'
+  # schedule:
+  #   - cron: '27 3 * * *'
 
 concurrency:
     group: main
-    cancel-in-progress: true
+    # cancel-in-progress: true
 
 permissions:
   contents: write
