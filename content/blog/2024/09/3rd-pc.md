@@ -6,7 +6,7 @@ tags: ["PC"]
 
 PCが増えます。
 
-[前の記事](/blog/inspiron-upgrade-2)でメインPCのCPUとメモリを交換し(、何故かグラボも買ってしまった)た結果、
+[前の記事](/blog/inspiron-upgrade-2/)でメインPCのCPUとメモリを交換し(、何故かグラボも買ってしまった)た結果、
 
 ```yaml
 CPU: Core i3-4170
