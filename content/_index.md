@@ -36,6 +36,8 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | [nishi.boats](https://nishi.boats/) | nishi | 2024-08-24 |
 | [KitsuneProgrammer / 開発者の狐。](https://kitsuneprogram.github.io/) | KitsuneProgrammer / かたつむり.cs | 2024-11-18 |
 | [ujex256's site(仮)](https://ujr256.com/) | ujex256 | 2024-12-07 |
+| [TechFish_Lab](https://sakana11.org/) | TechFish | 2024-12-12 |
+| [たこのほーむぺーじ](https://info.takos.jp/) | たこ | 2024-12-12 |
 
 ## WebRing
 
