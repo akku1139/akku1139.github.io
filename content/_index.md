@@ -1,9 +1,10 @@
 ---
+summary: My website
 ---
 
 やぁ
 
-![Moe Counter](https://moe-counter.glitch.me/get/@akku1139.github.io?theme=rule34&darkmode=0)
+![Moe Counter](https://count.getloli.com/get/@akku1139.github.io?theme=rule34&darkmode=0)
 
 
 ## Discord
@@ -33,6 +34,8 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | [nakasyou's profile](https://nakasyou.github.io/) | nakasyou | 2024-06-30 |
 | [Amex Net](https://www.ame-x.net/) | amex | 2024-07-24 |
 | [nishi.boats](https://nishi.boats/) | nishi | 2024-08-24 |
+| [KitsuneProgrammer / 開発者の狐。](https://kitsuneprogram.github.io/) | KitsuneProgrammer / かたつむり.cs | 2024-11-18 |
+| [ujex256's site(仮)](https://ujr256.com/) | ujex256 | 2024-12-07 |
 
 ## WebRing
 
