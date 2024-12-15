@@ -38,6 +38,7 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | [ujex256's site(仮)](https://ujr256.com/) | ujex256 | 2024-12-07 |
 | [TechFish_Lab](https://sakana11.org/) | TechFish | 2024-12-12 |
 | [たこのほーむぺーじ](https://info.takos.jp/) | たこ | 2024-12-12 |
+| [みりーのねこ通信](https://miry.jp/) | Miry | 2024-12-15 |
 
 ## WebRing
 
