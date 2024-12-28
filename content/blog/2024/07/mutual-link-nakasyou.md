@@ -1,6 +1,8 @@
 ---
 title: 相互リンクのお知らせ with nakasyou
 date: 2024-07-17
+tags:
+- akku1139.github.io
 ---
 
 遅くなりましたが相互リンクを始めたのでお知らせです。
