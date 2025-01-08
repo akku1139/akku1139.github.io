@@ -112,10 +112,50 @@ VP8,9及びAV1の動画が降ってこないように設定しています。
 
 > Haswell to Skylake hybrid VP8 encoding and, on some GPUs, VP9 decoding is supported by intel-hybrid-codec-driverAUR. Note: VP9 decoding is not supported on Haswell, but exposed by the driver. This confuses at least mpv, which, as a result, does single-threaded CPU-based decoding and drops a lot of frames on streams that it perfectly decodes without this driver.
 
-とりあえず `intel-hybrid-codec-driver-git` を[auto-aur](https://akku1139.github.io/blog/auto-aur-released/)に追加したのでインストールしていきましょう。
+とりあえず `intel-hybrid-codec-driver-git` を[auto-aur](https://akku1139.github.io/blog/auto-aur-released/)に追加したのでインストールしていきましょう。(追記: Chaotic-AURにあった)
 
 インストールサイズは 5.08MiB です。
 
 ![hybrid-driver](./3-hybrid-vainfo.png)
 
 入りました。が、VP8とVP9しかサポートしてないとか聞いてないぞ()
+
+> Required by (1)
+>  libva-intel-driver-hybrid (requires intel-hybrid-codec-driver) (optional)
+
+ビルドしてみよう!
+
+多分 `hybrid_codec` ドライバーを有効にしたlibva-intel-driverのビルドをする必要があるようです。
+
+と思いましたが、chaotic-aurにありました。やったね!
+
+```
+$ vainfo --display drm
+Trying display: drm
+vainfo: VA-API version: 1.22 (libva 2.22.0)
+vainfo: Driver version: Intel i965 driver for Intel(R) Haswell Desktop - 2.4.1
+vainfo: Supported profile and entrypoints
+      VAProfileMPEG2Simple            :	VAEntrypointVLD
+      VAProfileMPEG2Simple            :	VAEntrypointEncSlice
+      VAProfileMPEG2Main              :	VAEntrypointVLD
+      VAProfileMPEG2Main              :	VAEntrypointEncSlice
+      VAProfileH264ConstrainedBaseline:	VAEntrypointVLD
+      VAProfileH264ConstrainedBaseline:	VAEntrypointEncSlice
+      VAProfileH264Main               :	VAEntrypointVLD
+      VAProfileH264Main               :	VAEntrypointEncSlice
+      VAProfileH264High               :	VAEntrypointVLD
+      VAProfileH264High               :	VAEntrypointEncSlice
+      VAProfileH264MultiviewHigh      :	VAEntrypointVLD
+      VAProfileH264MultiviewHigh      :	VAEntrypointEncSlice
+      VAProfileH264StereoHigh         :	VAEntrypointVLD
+      VAProfileH264StereoHigh         :	VAEntrypointEncSlice
+      VAProfileVC1Simple              :	VAEntrypointVLD
+      VAProfileVC1Main                :	VAEntrypointVLD
+      VAProfileVC1Advanced            :	VAEntrypointVLD
+      VAProfileNone                   :	VAEntrypointVideoProc
+      VAProfileJPEGBaseline           :	VAEntrypointVLD
+      VAProfileVP9Profile0            :	VAEntrypointVLD
+```
+
+VP8どこ行った?
+
