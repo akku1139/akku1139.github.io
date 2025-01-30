@@ -176,16 +176,16 @@ Discordのユーザー設定を開いてください。
 
 | Find | Replace |
 | --- | --- |
-| な | にゃ |
-| ナ | ニャ |
-| ﾅ | ﾆｬ |
-| ｎａ | ｎｙａ |
+| `な` | `にゃ` |
+| `ナ` | `ニャ` |
+| `ﾅ` | `ﾆｬ` |
+| `ｎａ` | `ｎｙａ` |
 
 この機能は残念がらURLにも適応されてしまうため、
 
 | Find | Replace |
 | --- | --- |
-| na | nya |
+| `na` | `nya` |
 
 としてしまうと `https://www.gov.na/` は `https://www.gov.nya/` となってしまうためおすすめしません。
 
@@ -193,8 +193,8 @@ Discordのユーザー設定を開いてください。
 
 | Find | Replace |
 | --- | --- |
-| twitter.com | fxtwitter.com |
-| x.com | fxtwitter.com |
+| `https://twitter.com` | `https://fxtwitter.com` |
+| `https://x.com` | `https://fxtwitter.com` |
 
 の置換を設定しておけば自動でTwitterがFxTwitterで見れるようになって嬉しいと思います。
 
