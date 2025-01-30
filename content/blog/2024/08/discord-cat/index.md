@@ -193,8 +193,8 @@ Discordのユーザー設定を開いてください。
 
 | Find | Replace |
 | --- | --- |
-| `https://twitter.com` | `https://fxtwitter.com` |
-| `https://x.com` | `https://fxtwitter.com` |
+| `https://twitter.com/` | `https://fxtwitter.com/` |
+| `https://x.com/` | `https://fxtwitter.com/` |
 
 の置換を設定しておけば自動でTwitterがFxTwitterで見れるようになって嬉しいと思います。
 
