@@ -20,7 +20,7 @@
 - new Date() vs Date.parse() and TimeZone
 - Illegal invocation with enhanced-image (first load page)
   Uncaught (in promise) TypeError: 'get nextSibling' called on an object that does not implement interface Node.
-- phony page (yt-stream etc...) (Avoiding reload loops)
+- phony page (yt-stream etc...) (Avoiding reload loops) (`data-sveltekit-reload` https://svelte.jp/docs/kit/link-options)
 - Dev server not working
 - code block color https://vscode.dev/github.com/akku1139/akku1139.github.io/blob/sveltekit/src/routes/global.css#L86
 - fallback description
