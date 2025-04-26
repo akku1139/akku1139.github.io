@@ -36,8 +36,8 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | [![banner](https://nishi.boats/banner.gif) nishi.boats](https://nishi.boats/) | nishi | 2024-08-24 |
 | [KitsuneProgrammer / 開発者の狐。](https://kitsuneprogram.github.io/) | KitsuneProgrammer / かたつむり.cs | 2024-11-18 |
 | [ujex256's site(仮)](https://ujr256.com/) | ujex256 | 2024-12-07 |
-| [TechFish_Lab](https://sakana11.org/) | TechFish | 2024-12-12 |
-| [たこのほーむぺーじ](https://info.takos.jp/) | たこ | 2024-12-12 |
+| [![banner](https://cdn.sakana11.org/banner.jpg) TechFish_Lab](https://sakana11.org/) | TechFish | 2024-12-12 |
+| [![banner](https://info.takos.jp/banner.png) たこのほーむぺーじ](https://info.takos.jp/) | たこ | 2024-12-12 |
 | [みりーのねこ通信](https://miry.jp/) | Miry | 2024-12-15 |
 | [![banner](https://t3tra.dev/images/banner_dark.png) t3tra's website](https://t3tra.dev/) | t3tra | 2025-04-26 |
 | [![banner](https://main.skikozou.me/banner.png) sizu](https://main.skikozou.me/) | skikozou | 2025-04-27 |
