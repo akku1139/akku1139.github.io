@@ -40,6 +40,26 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | [たこのほーむぺーじ](https://info.takos.jp/) | たこ | 2024-12-12 |
 | [みりーのねこ通信](https://miry.jp/) | Miry | 2024-12-15 |
 
+### Banners
+
+### 88x31
+
+Web Standard
+
+![88x31](/banners/88x31.png)
+
+### 200x40
+
+Japanese Standard
+
+![200x40](/banners/200x40.png)
+
+### 320x100
+
+Vex Standard
+
+![320x100](/banners/320x100.png)
+
 ## WebRing
 
 [←](https://musubink.fyi/akku/previous)[Musubink](https://musubink.fyi/akku/random)[→](https://musubink.fyi/akku/next) ([home page](https://musubink.fyi/))
