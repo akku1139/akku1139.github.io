@@ -33,15 +33,15 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | ---- | ----- | ---- |
 | [nakasyou's profile](https://nakasyou.github.io/) | nakasyou | 2024-06-30 |
 | [Amex Net](https://www.ame-x.net/) | amex | 2024-07-24 |
-| [![banner](https://nishi.boats/banner.gif) <br> nishi.boats](https://nishi.boats/) | nishi | 2024-08-24 |
+| [![banner](https://nishi.boats/banner.gif) nishi.boats](https://nishi.boats/) | nishi | 2024-08-24 |
 | [KitsuneProgrammer / 開発者の狐。](https://kitsuneprogram.github.io/) | KitsuneProgrammer / かたつむり.cs | 2024-11-18 |
 | [ujex256's site(仮)](https://ujr256.com/) | ujex256 | 2024-12-07 |
 | [TechFish_Lab](https://sakana11.org/) | TechFish | 2024-12-12 |
 | [たこのほーむぺーじ](https://info.takos.jp/) | たこ | 2024-12-12 |
 | [みりーのねこ通信](https://miry.jp/) | Miry | 2024-12-15 |
-| [![banner](https://t3tra.dev/images/banner_dark.png) <br> t3tra's website](https://t3tra.dev/) | t3tra | 2025-04-26 |
-| [![banner](https://main.skikozou.me/banner.png) <br> sizu](https://main.skikozou.me/) | skikozou | 2025-04-27 |
-| [![banner](https://371tti.net/banner.png) <br> 371tti.net](https://371tti.net/) | 371tti | 2025-04-27 |
+| [![banner](https://t3tra.dev/images/banner_dark.png) t3tra's website](https://t3tra.dev/) | t3tra | 2025-04-26 |
+| [![banner](https://main.skikozou.me/banner.png) sizu](https://main.skikozou.me/) | skikozou | 2025-04-27 |
+| [![banner](https://371tti.net/banner.png) 371tti.net](https://371tti.net/) | 371tti | 2025-04-27 |
 
 ### Banners
 
