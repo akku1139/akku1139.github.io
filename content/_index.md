@@ -32,7 +32,7 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | Site | Owner | Date |
 | ---- | ----- | ---- |
 | [nakasyou's profile](https://nakasyou.github.io/) | nakasyou | 2024-06-30 |
-| [Amex Net](https://www.ame-x.net/) | amex | 2024-07-24 |
+| [![banner](https://cdn.edamamex.dev/banner.png) Amex Net](https://www.ame-x.net/) | amex | 2024-07-24 |
 | [![banner](https://nishi.boats/banner.gif) nishi.boats](https://nishi.boats/) | nishi | 2024-08-24 |
 | [KitsuneProgrammer / 開発者の狐。](https://kitsuneprogram.github.io/) | KitsuneProgrammer / かたつむり.cs | 2024-11-18 |
 | [ujex256's site(仮)](https://ujr256.com/) | ujex256 | 2024-12-07 |
