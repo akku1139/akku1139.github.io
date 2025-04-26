@@ -39,6 +39,7 @@ Discall | https://jp.dicoall.com/server/1171778102741970964
 | [TechFish_Lab](https://sakana11.org/) | TechFish | 2024-12-12 |
 | [たこのほーむぺーじ](https://info.takos.jp/) | たこ | 2024-12-12 |
 | [みりーのねこ通信](https://miry.jp/) | Miry | 2024-12-15 |
+| [t3tra's website](https://t3tra.dev/)<br>![banner](https://t3tra.dev/images/banner_dark.png) | t3tra | 2025-04-26 |
 
 ### Banners
 
