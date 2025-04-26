@@ -1,8 +1,5 @@
 import { leaf } from "$lib/hugoBundle.ts"
 
-export const prerender = true
-export const trailingSlash = "never"
-
 export const GET = async () => {
   await Promise.all(leaf.map(async page => {
     return <item>
