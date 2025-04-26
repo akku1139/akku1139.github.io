@@ -48,17 +48,23 @@ Web Standard
 
 ![88x31](/banners/88x31.png)
 
+`https://akku1139.github.io/banners/88x31.png`
+
 ### 200x40
 
 Japanese Standard
 
 ![200x40](/banners/200x40.png)
 
+`https://akku1139.github.io/banners/200x40.png`
+
 ### 320x100
 
 Vex Standard
 
 ![320x100](/banners/320x100.png)
+
+`tps://akku1139.github.io/banners/320x100.png`
 
 ## WebRing
 
