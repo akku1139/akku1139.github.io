@@ -67,7 +67,7 @@ Vex Standard
 
 ![320x100](/banners/320x100.png)
 
-`tps://akku1139.github.io/banners/320x100.png`
+`https://akku1139.github.io/banners/320x100.png`
 
 ## WebRing
 
