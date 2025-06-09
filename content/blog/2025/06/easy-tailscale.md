@@ -16,6 +16,17 @@ TailscaleはWireGuardベースのVPNサービスです。
 
 無料枠がデカすぎます!
 
+この記事では
+
+- Chromebook (ChromeOS)
+- Alpine Linux
+- Arch Linux
+
+でのインストール方法も解説します。
+他のOSは現状使っていないのでこの記事では解説しません。
+公式のインストール方法を読んだらいいと思います。
+
+
 ## Chromebook
 
 Android版Tailscaleを入れたら動きます。
@@ -39,6 +50,8 @@ rooになって
 
 をしたら、コンソールに表示されるログインURLを開いてログイン。
 
+tailscaleのデーモンを `tailscale up` より前に起動する必要があるようです。
+
 ([Alpine Linux に Tailscale を入れたい - なつねこメモ](https://tech.natsuneko.blog/entry/2023/07/21/install-tailscale-on-alpine-linux)を参考にしました)
 
 以上
@@ -46,7 +59,22 @@ rooになって
 
 ## Arch Linux
 
-追記予定
+rootになって
+
+`pacman -S tailscale`
+
+`systemctl enable tailscaled.service`
+
+`systemctl start tailscaled.service`
+
+( `systemctl enable --now tailscaled.service` ) で一括っぽい
+
+`tailscale up`
+
+あとはAlpineと同じです
+
+以上
+
 
 ## 総括
 
