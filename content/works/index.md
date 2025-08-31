@@ -4,6 +4,15 @@ summary: My works
 date: 2024-08-24
 ---
 
+## TeamYogaBlade2
+
+Lenovo YOGA Tablet 8/10のpostmarketOS移植プロジェクト
+
+| key | value |
+| --- | --- |
+| GitHub | https://github.com/TeamYogaBlade2/ |
+| postmarketOS Wiki | https://wiki.postmarketos.org/wiki/Lenovo_YOGA_Tablet_10_(lenovo-b8000) |
+
 ## Auto-AUR
 
 Chaotic-AURを補完するビルド済みAURリポジトリ
