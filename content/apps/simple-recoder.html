@@ -1,0 +1,218 @@
+---
+title: シンプル録音
+summary: このアプリケーションはGemini 2.5 Flashによって生成されたコードが含まれます
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボイスレコーダー</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            padding: 20px;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            place-items: center;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                grid-template-columns: 2fr 1fr;
+                padding: 40px;
+                place-items: start center;
+            }
+        }
+
+        main {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        aside {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        
+        aside h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        #recordingsList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #recordingsList li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #recordingsList li:last-child {
+            border-bottom: none;
+        }
+
+        #recordingsList li span {
+            flex-grow: 1;
+        }
+
+        #recordingsList li button {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>ボイスレコーダー</h1>
+        <p>録音を開始して、音声データを記録しましょう。</p>
+        <div id="controls">
+            <button id="recordButton" class="outline">録音開始</button>
+            <button id="stopButton" class="outline" disabled>録音停止</button>
+        </div>
+        <div id="audio-playback">
+            <audio id="audioPlayer" controls></audio>
+        </div>
+        <p id="message"></p>
+    </main>
+    
+    <aside>
+        <h2>録音リスト</h2>
+        <ul id="recordingsList">
+            <!-- 録音されたデータがここに追加されます -->
+        </ul>
+    </aside>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const recordButton = document.getElementById('recordButton');
+            const stopButton = document.getElementById('stopButton');
+            const audioPlayer = document.getElementById('audioPlayer');
+            const messageElement = document.getElementById('message');
+            const recordingsList = document.getElementById('recordingsList');
+
+            let mediaRecorder;
+            let audioChunks = [];
+
+            // メッセージを表示する関数
+            const showMessage = (msg, isError = false) => {
+                messageElement.textContent = msg;
+                messageElement.style.color = isError ? 'red' : 'green';
+            };
+
+            // 録音リストに新しい項目を追加する関数
+            const addRecordingToList = (audioBlob, timestamp) => {
+                const recordingName = `録音 ${new Date(timestamp).toLocaleString()}`;
+                const audioUrl = URL.createObjectURL(audioBlob);
+
+                const li = document.createElement('li');
+                
+                // 録音名
+                const span = document.createElement('span');
+                span.textContent = recordingName;
+                li.appendChild(span);
+
+                // 再生ボタン
+                const playButton = document.createElement('button');
+                playButton.textContent = '▶';
+                playButton.className = 'secondary';
+                playButton.onclick = () => {
+                    audioPlayer.src = audioUrl;
+                    audioPlayer.play();
+                    showMessage(`${recordingName} を再生します。`);
+                };
+                li.appendChild(playButton);
+
+                // ダウンロードボタン
+                const downloadButton = document.createElement('button');
+                downloadButton.textContent = '⭳';
+                downloadButton.className = 'contrast';
+                downloadButton.onclick = () => {
+                    const a = document.createElement('a');
+                    document.body.appendChild(a);
+                    a.style = 'display: none';
+                    a.href = audioUrl;
+                    a.download = `${recordingName.replace(/[:\/]/g, '-')}.wav`; // ファイル名に日時を含める
+                    a.click();
+                    window.URL.revokeObjectURL(audioUrl); // メモリを解放
+                    showMessage(`${recordingName} がダウンロードされました。`);
+                };
+                li.appendChild(downloadButton);
+
+                // 削除ボタン
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = '✖';
+                deleteButton.className = 'secondary outline';
+                deleteButton.onclick = () => {
+                    if (audioPlayer.src === audioUrl) {
+                        audioPlayer.pause();
+                        audioPlayer.src = '';
+                    }
+                    li.remove();
+                    URL.revokeObjectURL(audioUrl); // メモリを解放
+                    showMessage(`${recordingName} を削除しました。`);
+                };
+                li.appendChild(deleteButton);
+
+                recordingsList.appendChild(li);
+                showMessage(`${recordingName} をリストに追加しました。`);
+            };
+
+            // 録音開始
+            recordButton.addEventListener('click', async () => {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+
+                    mediaRecorder.addEventListener('dataavailable', event => {
+                        audioChunks.push(event.data);
+                    });
+
+                    mediaRecorder.addEventListener('stop', () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                        addRecordingToList(audioBlob, Date.now());
+                        
+                        // 録音停止後、マイクアクセスを停止
+                        stream.getTracks().forEach(track => track.stop());
+                    });
+
+                    mediaRecorder.start();
+                    showMessage('録音中です... マイクに向かって話してください。');
+                    recordButton.disabled = true;
+                    stopButton.disabled = false;
+                } catch (err) {
+                    showMessage('マイクへのアクセスが拒否されました。マイクの使用を許可してください。', true);
+                    console.error('録音に失敗しました:', err);
+                }
+            });
+
+            // 録音停止
+            stopButton.addEventListener('click', () => {
+                if (mediaRecorder && mediaRecorder.state === 'recording') {
+                    mediaRecorder.stop();
+                    showMessage('録音が停止されました。');
+                    recordButton.disabled = false;
+                    stopButton.disabled = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
