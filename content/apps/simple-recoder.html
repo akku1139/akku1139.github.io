@@ -2,7 +2,6 @@
 title: シンプル録音
 summary: このアプリケーションはGemini 2.5 Flashによって生成されたコードが含まれます
 ---
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.conditional.min.css"> -->
 <style>
   content {
     :root {
@@ -233,7 +232,8 @@ summary: このアプリケーションはGemini 2.5 Flashによって生成さ�
       const addRecordingToList = (audioBlob, timestamp) => {
           const recordingName = `録音 ${new Date(timestamp).toLocaleString()}`;
           const audioUrl = URL.createObjectURL(audioBlob);
-  
+          audioPlayer.src = audioUrl;
+
           const li = document.createElement('li');
           
           // 録音名
