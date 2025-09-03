@@ -2,62 +2,60 @@
 title: シンプル録音
 summary: このアプリケーションはGemini 2.5 Flashによって生成されたコードが含まれます
 ---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 <style>
   body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-  padding: 20px;
-  min-height: 100vh;
-  background-color: #f0f0f0;
-  place-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    place-items: center;
   }
   @media (min-width: 768px) {
-  body {
-  grid-template-columns: 2fr 1fr;
-  padding: 40px;
-  place-items: start center;
-  }
+    body {
+      grid-template-columns: 2fr 1fr;
+      padding: 40px;
+      place-items: start center;
+    }
   }
   main {
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
   }
   aside {
-  width: 100%;
-  max-width: 500px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
   }
   aside h2 {
-  margin-top: 0;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
   }
   #recordingsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   #recordingsList li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
   }
   #recordingsList li:last-child {
-  border-bottom: none;
+    border-bottom: none;
   }
   #recordingsList li span {
-  flex-grow: 1;
+    flex-grow: 1;
   }
   #recordingsList li button {
-  margin-left: 5px;
+    margin-left: 5px;
   }
 </style>
 <main class="container">
