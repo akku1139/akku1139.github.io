@@ -8,13 +8,13 @@ summary: このアプリケーションはGemini 2.5 Flashによって生成さ�
     :root {
       --primary-color: #3f6fff;
       --primary-hover-color: #315ce6;
-      --secondary-color: #e9e9e9;
-      --secondary-hover-color: #d9d9d9;
-      --contrast-color: #1a1a1a;
-      --contrast-hover-color: #0d0d0d;
+      --secondary-color: #3f3f3f;
+      --secondary-hover-color: #555;
+      --contrast-color: #ddd;
+      --contrast-hover-color: #eee;
       --border-radius: 8px;
       --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
     
     body {
@@ -25,7 +25,7 @@ summary: このアプリケーションはGemini 2.5 Flashによって生成さ�
       grid-gap: 20px;
       padding: 20px;
       min-height: 100vh;
-      background-color: #f0f0f0;
+/*       background-color: #f0f0f0; */
       place-items: center;
     }
     
@@ -100,6 +100,20 @@ summary: このアプリケーションはGemini 2.5 Flashによって生成さ�
     
     audio {
       width: 100%;
+      background-color: var(--secondary-color);
+      border-radius: var(--border-radius);
+      padding: 10px;
+    }
+
+    audio::-webkit-media-controls-panel {
+      background-color: var(--secondary-color);
+      color: var(--contrast-color);
+    }
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-volume-slider,
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+      color: var(--contrast-color);
     }
     
     p#message {
@@ -111,7 +125,7 @@ summary: このアプリケーションはGemini 2.5 Flashによって生成さ�
       width: 100%;
       max-width: 500px;
       padding: 20px;
-      background-color: #fff;
+      background-color: #303030;
       border-radius: var(--border-radius);
       box-shadow: var(--card-shadow);
       text-align: left;
@@ -212,7 +226,7 @@ summary: このアプリケーションはGemini 2.5 Flashによって生成さ�
       // メッセージを表示する関数
       const showMessage = (msg, isError = false) => {
           messageElement.textContent = msg;
-          messageElement.style.color = isError ? 'red' : 'green';
+          messageElement.style.color = isError ? '#7aa1ff' : 'red';
       };
   
       // 録音リストに新しい項目を追加する関数
