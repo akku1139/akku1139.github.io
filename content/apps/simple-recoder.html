@@ -4,58 +4,59 @@ summary: このアプリケーションはGemini 2.5 Flashによって生成さ�
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 <style>
-  body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    place-items: center;
-  }
-  @media (min-width: 768px) {
+  content {
     body {
-      grid-template-columns: 2fr 1fr;
-      padding: 40px;
-      place-items: start center;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      place-items: center;
     }
-  }
-  main {
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-  }
-  aside {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
-  aside h2 {
-    margin-top: 0;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-  }
-  #recordingsList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  #recordingsList li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-  }
-  #recordingsList li:last-child {
-    border-bottom: none;
-  }
-  #recordingsList li span {
-    flex-grow: 1;
-  }
-  #recordingsList li button {
-    margin-left: 5px;
+    @media (min-width: 768px) {
+      body {
+        grid-template-columns: 2fr 1fr;
+        padding: 40px;
+        place-items: start center;
+      }
+    }
+    main {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+    aside {
+      width: 100%;
+      max-width: 500px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    aside h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+    #recordingsList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #recordingsList li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    #recordingsList li:last-child {
+      border-bottom: none;
+    }
+    #recordingsList li span {
+      flex-grow: 1;
+    }
+    #recordingsList li button {
+      margin-left: 5px;
+    }
   }
 </style>
 <main class="container">
