@@ -26,7 +26,7 @@ Scratch経由で今は亡き匿名技研から技術界隈に入り浸ってし�
 | akku1139 | many accounts |
 | akkun11 / akku--n11 | Scratch, etc. |
 | akk._.u | cute (^╷  ̫╷^) |
-| 露草 あかり / Tsuyukusa Akari | pen name |
+| 露草 あかり / Tsuyukusa Akari | pen name, 露草 (姓/Family Name) -> あかり (名/Given Name) |
 | 水面 | 模倣名義 |
 
 
