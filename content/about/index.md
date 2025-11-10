@@ -1,21 +1,33 @@
 ---
-title: About
+title: About me
 date: 2024-04-04
 ---
 
 こんにちは、akkuです。
 
 
-## 私について
+## 私について / About me
 
 Scratch経由で今は亡き匿名技研から技術界隈に入り浸ってしまった。
 
 フルート吹き。
 
 
-## 私が取り組んでいること
+## 私が取り組んでいること / What I'm working on
 
 - [My Works](/works/)
+
+
+## Names
+
+| name | places |
+| ---- | ------ |
+| akku / -akku- | common display name |
+| akku1139 | many accounts |
+| akkun11 / akku--n11 | Scratch, etc. |
+| akk._.u | cute (^╷  ̫╷^) |
+| 露草 あかり / Tsuyukusa Akari | pen name |
+| 水面 | 模倣名義 |
 
 
 ## Dev
