@@ -5,15 +5,12 @@ summary: このアプリケーションはGPT-5によって生成されたコー
 
 <script src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
 <style>
-  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding:16px; }
   textarea { width: 100%; min-height:120px; font-family: monospace; }
-  .grid { display: grid; gap:12px; grid-template-columns: 1fr 1fr; }
   table { border-collapse: collapse; width: 100%; overflow:auto; }
   th, td { border: 1px solid #bbb; padding:6px 8px; text-align: left; }
   .controls { display:flex; gap:8px; flex-wrap:wrap; }
   .small { font-size:0.9rem; }
   .panel { border:1px solid #ddd; padding:12px; border-radius:8px; }
-  .wide { grid-column: 1 / -1; }
 </style>
 
 <h1>SoC parents 管理ツール (Alpine.js)</h1>
@@ -34,10 +31,9 @@ summary: このアプリケーションはGPT-5によって生成されたコー
       <button @click="clearFormInputs()">フォームクリア</button>
       <button @click="resetAll()">全データリセット</button>
     </div>
-    <p class="small">注意: 解析は定型フォーマット (static const char * const NAME[] = { ... }) を想定しています。</p>
   </div>
 
-  <div class="grid" style="margin-top:12px">
+  <div style="margin-top:12px">
     <div class="panel">
       <h3>出力 (HTML table)</h3>
       <div style="overflow:auto;">
@@ -76,10 +72,12 @@ summary: このアプリケーションはGPT-5によって生成されたコー
       <p class="small">markdown を編集して <strong>復元</strong> を押すと現在の状態を入れ替えます。</p>
     </div>
 
-    <div class="panel wide">
-      <h3>内部JSON (リアクティブ)</h3>
-      <pre x-text="prettyJSON()" style="white-space:pre-wrap"></pre>
-    </div>
+    <details>
+      <summary>内部JSON</summary>
+      <div class="panel">
+        <pre x-text="prettyJSON()" style="white-space:pre-wrap"></pre>
+      </div>
+    </details>
   </div>
 
   <template x-if="lastError">
