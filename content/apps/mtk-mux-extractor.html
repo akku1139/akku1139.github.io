@@ -1,0 +1,259 @@
+---
+title: MediaTek MUX extractor
+summary: このアプリケーションはGPT-5によって生成されたコードが含まれます
+---
+
+<script src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding:16px; }
+  textarea { width: 100%; min-height:120px; font-family: monospace; }
+  .grid { display: grid; gap:12px; grid-template-columns: 1fr 1fr; }
+  table { border-collapse: collapse; width: 100%; overflow:auto; }
+  th, td { border: 1px solid #bbb; padding:6px 8px; text-align: left; }
+  .controls { display:flex; gap:8px; flex-wrap:wrap; }
+  .small { font-size:0.9rem; }
+  .panel { border:1px solid #ddd; padding:12px; border-radius:8px; }
+  .wide { grid-column: 1 / -1; }
+</style>
+
+<h1>SoC parents 管理ツール (Alpine.js)</h1>
+
+<div x-data="parentApp()" x-init="init()">
+
+  <div class="panel">
+    <label class="small">SoC (例: mt2701)</label>
+    <input x-model="soc" type="text" placeholder="SoC を入力" class="small" />
+
+    <div style="margin-top:8px">
+      <label class="small">MUX (Cソース) — 複数の <code>xxx_parents</code> ブロックを貼れます</label>
+      <textarea x-model="muxInput" placeholder="static const char * const axi_parents[] = {\n  \"clk26m\",\n  \"syspll1_d2\",\n};"></textarea>
+    </div>
+
+    <div style="margin-top:8px" class="controls">
+      <button @click="addFromMux()">MUXから追加</button>
+      <button @click="clearFormInputs()">フォームクリア</button>
+      <button @click="resetAll()">全データリセット</button>
+    </div>
+    <p class="small">注意: 解析は定型フォーマット (static const char * const NAME[] = { ... }) を想定しています。</p>
+  </div>
+
+  <div class="grid" style="margin-top:12px">
+    <div class="panel">
+      <h3>出力 (HTML table)</h3>
+      <div style="overflow:auto;">
+        <table>
+          <thead>
+            <tr>
+              <template x-for="h in tableHeaders" :key="h">
+                <th x-text="h"></th>
+              </template>
+            </tr>
+          </thead>
+          <tbody>
+            <template x-for="row in rows" :key="row._key">
+              <tr>
+                <td x-text="row.group"></td>
+                <td x-text="row.soc"></td>
+                <template x-for="i in maxParents" :key="i">
+                  <td x-text="row.parents[i-1] ?? ''"></td>
+                </template>
+              </tr>
+            </template>
+            <tr x-show="rows.length===0"><td colspan="100">データがありません。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Markdown 表示 / 復元</h3>
+      <label class="small">Markdown テーブル (編集して復元できます)</label>
+      <textarea x-model="markdown" @input.debounce="onMarkdownEdit()"></textarea>
+      <div class="controls" style="margin-top:8px">
+        <button @click="generateMarkdown()">Markdown を更新</button>
+        <button @click="restoreFromMarkdown()">Markdown から復元</button>
+      </div>
+      <p class="small">markdown を編集して <strong>復元</strong> を押すと現在の状態を入れ替えます。</p>
+    </div>
+
+    <div class="panel wide">
+      <h3>内部JSON (リアクティブ)</h3>
+      <pre x-text="prettyJSON()" style="white-space:pre-wrap"></pre>
+    </div>
+  </div>
+
+  <template x-if="lastError">
+    <div style="margin-top:12px;color:#900">エラー: <span x-text="lastError"></span></div>
+  </template>
+
+</div>
+
+<script>
+function parentApp(){
+  return {
+    soc: '',
+    muxInput: '',
+    data: {}, // { "axi_parents": { "mt2701": ["clk26m","syspll1_d2"] }, ... }
+    rows: [],
+    tableHeaders: ['Group','SoC'],
+    maxParents: 0,
+    markdown: '',
+    lastError: '',
+
+    init(){
+      // nothing for now
+      this.updateView();
+    },
+
+    clearFormInputs(){
+      this.soc = '';
+      this.muxInput = '';
+      this.lastError = '';
+    },
+
+    resetAll(){
+      if(!confirm('全データを消します。よろしいですか？')) return;
+      this.data = {};
+      this.updateView();
+    },
+
+    // Parse the C-style muxInput and return object { name: [entries] }
+    parseMux(text){
+      const out = {};
+      try{
+        // match blocks like: static const char * const NAME[] = { "a", "b" , ... };
+        const re = /static\s+const\s+char\s*\*\s*const\s*(\w+)\s*\[\s*\]\s*=\s*\{([\s\S]*?)\};/g;
+        let m;
+        while((m = re.exec(text)) !== null){
+          const name = m[1].trim();
+          const inner = m[2];
+          // find all string literals inside
+          const strRe = /"([^"\\]*(?:\\.[^"\\]*)*)"/g;
+          const vals = [];
+          let s;
+          while((s = strRe.exec(inner)) !== null){
+            // unescape simple escapes
+            vals.push(s[1].replace(/\\"/g,'"').replace(/\\n/g,'\\n'));
+          }
+          out[name] = vals;
+        }
+      }catch(e){
+        this.lastError = 'C解析中に例外: ' + e.message;
+      }
+      return out;
+    },
+
+    addFromMux(){
+      this.lastError = '';
+      if(!this.soc){ this.lastError = 'SoC を入力してください'; return; }
+      if(!this.muxInput){ this.lastError = 'MUX 入力を貼ってください'; return; }
+
+      const parsed = this.parseMux(this.muxInput);
+      if(Object.keys(parsed).length === 0){ this.lastError = '解析できるブロックが見つかりませんでした。フォーマットを確認してください。'; return; }
+
+      for(const name in parsed){
+        if(!this.data[name]) this.data[name] = {};
+        // overwrite or add SoC entry
+        this.data[name][this.soc] = parsed[name].slice();
+      }
+
+      // update view
+      this.updateView();
+      // keep inputs so user can add more if desired
+    },
+
+    updateView(){
+      // build rows array sorted by group then soc
+      const groups = Object.keys(this.data).sort();
+      const newRows = [];
+      let maxP = 0;
+      for(const g of groups){
+        const socs = Object.keys(this.data[g]).sort();
+        for(const s of socs){
+          const parents = Array.isArray(this.data[g][s]) ? this.data[g][s] : [];
+          if(parents.length > maxP) maxP = parents.length;
+          newRows.push({ group: g, soc: s, parents: parents, _key: g + '|' + s });
+        }
+      }
+      this.rows = newRows;
+      this.maxParents = maxP;
+      // build headers
+      const headers = ['Group','SoC'];
+      for(let i=1;i<=maxP;i++) headers.push('Parent ' + i);
+      this.tableHeaders = headers;
+      // generate markdown automatically
+      this.generateMarkdownAuto();
+    },
+
+    generateMarkdownAuto(){
+      // update markdown but don't clobber if user is actively editing: simple heuristic
+      // For simplicity, always update markdown to reflect current data
+      this.generateMarkdown();
+    },
+
+    generateMarkdown(){
+      const hdrs = ['Group','SoC'];
+      for(let i=1;i<=this.maxParents;i++) hdrs.push('Parent ' + i);
+      const sep = hdrs.map(()=>'---');
+      const lines = [];
+      lines.push('| ' + hdrs.join(' | ') + ' |');
+      lines.push('| ' + sep.join(' | ') + ' |');
+      for(const r of this.rows){
+        const cells = [r.group, r.soc].concat(r.parents.slice(0,this.maxParents));
+        // pad
+        while(cells.length < hdrs.length) cells.push('');
+        // escape pipe characters if any
+        const esc = cells.map(c => String(c).replace(/\|/g,'\\|'));
+        lines.push('| ' + esc.join(' | ') + ' |');
+      }
+      this.markdown = lines.join('\n');
+    },
+
+    prettyJSON(){
+      try{ return JSON.stringify(this.data, null, 2); }catch(e){ return String(this.data); }
+    },
+
+    // parse markdown table to this.data
+    restoreFromMarkdown(){
+      this.lastError = '';
+      if(!this.markdown || !this.markdown.trim()){ this.lastError='Markdown が空です'; return; }
+      try{
+        const lines = this.markdown.split(/\r?\n/).map(l=>l.trim()).filter(l=>l.length>0);
+        if(lines.length < 2) { this.lastError='Markdown テーブルが短すぎます'; return; }
+        const headerLine = lines[0];
+        // split by | and trim
+        const headers = headerLine.split('|').map(s=>s.trim()).filter((s,i)=>s.length>0);
+        if(headers.length < 2){ this.lastError='ヘッダーが見つかりません'; return; }
+        // determine how many parent columns
+        const parentCount = Math.max(0, headers.length - 2);
+        const newData = {};
+        // skip the second separator line (---)
+        const rowLines = lines.slice(2);
+        for(const line of rowLines){
+          const parts = line.split('|').map(s=>s.trim());
+          // because of leading/trailing '|', filter empty ends
+          const content = parts.filter((p,i) => {
+            // remove empty strings from ends
+            return !(i===0 && p==="") && !(i===parts.length-1 && p=="");
+          });
+          // now content[0]=Group, content[1]=SoC, rest = parents
+          if(content.length < 2) continue;
+          const group = content[0];
+          const soc = content[1];
+          const parents = content.slice(2, 2 + parentCount).map(x => x || '').filter(x => x !== '');
+          if(!newData[group]) newData[group] = {};
+          newData[group][soc] = parents;
+        }
+        this.data = newData;
+        this.updateView();
+      }catch(e){
+        this.lastError = 'Markdown 復元で例外: ' + e.message;
+      }
+    },
+
+    onMarkdownEdit(){
+      // do nothing by default — user must click 復元 to apply
+    }
+  }
+}
+</script>
