@@ -2,4 +2,4 @@
 title: MISC
 ---
 
-- [MediaTek MUXs from Mainline kernel](./mtk-mux)
+- [MediaTek MUXs from Mainline kernel](./mtk-mux/)
