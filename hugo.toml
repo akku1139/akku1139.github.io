@@ -8,7 +8,7 @@ theme = "hugo-bearhouse"
 enableRobotsTXT = true
 
 [permalinks]
-  blog = "/blog/:filename/"
+  blog = "/blog/:contentbasename/"
 
 [menus]
   [[menus.main]]
