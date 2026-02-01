@@ -1,5 +1,5 @@
 ---
-title: マッチ売りの少女: ファイア・セールス
+title: "マッチ売りの少女: ファイア・セールス"
 description: マッチ売りの少女、マルチ商法に染まる (written by Gemini 2.5 Flash)
 date: 2026-02-01
 ---
