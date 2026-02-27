@@ -41,6 +41,7 @@ https://x.com/alldocubejapan/status/2027050903644336530
 - TECLAST T65 Max
 - HEADWOLF FPad5 Pro
 - ALPHAWOLF APad2
+- aiwa tab AG10 (JA3-TBA1003)
 
 ### おそらく感染していないデバイス
 
@@ -73,6 +74,10 @@ https://x.com/alldocubejapan/status/2027050903644336530
 - Nothing Phone 3a Lite
 - ZTE REDMAGIC 11 Pro
 - BekoQurd M8
+- Lenovo Tab Plus (TB351FU)
+- motorola edge 60s pro (XT2507-3)
+- Lenovo Tab P12 (TB370FU)
+- Lenovo Tab P11 Pro (2nd Gen) (TB132FU)
 
 ### ソース
 
@@ -112,6 +117,8 @@ https://mitanyan98.hatenablog.com/entry/2026/02/27/121822
 https://twitter.com/nukomode/status/2026946135764709868
 https://twitter.com/WataruNRT/status/2026860742650343909
 https://twitter.com/gyapin/status/2026665777684951459
+https://x.com/idomizu_/status/2027340246372000027
+https://x.com/idomizu_/status/2027350966845284515
 
 感染してるやつが全部同じところのOEMだったら(ry
 
@@ -242,5 +249,7 @@ Dr.Web Lightでも検知できるっぽい。
 [Notepad++のアップデート機構が国家も関与する攻撃者によって侵害された件](https://x.com/yousukezan/status/2018248964521476126)があるので、こういうのが怖い。
 
 <hr />
+
+MediaTek Helio G99のAndroid 13, 14の開発環境が汚染されてる可能性はありそう。
 
 以上。
