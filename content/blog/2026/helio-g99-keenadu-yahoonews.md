@@ -30,6 +30,7 @@ https://x.com/alldocubejapan/status/2027050903644336530
 - ALLDOCUBE iPlay 50 mini Pro (8+256GB/8+128GB, Android 13)
 - ALLDOCUBE iPlay 60 mini Pro (8+128GB, Android 14)
 - ALLDOCUBE iPlay 50 mini Pro NFE (Android 13)
+- ALLDOCUBE iPlay 60 mini Pro (8+256GB)
 - ALLDOCUBE iPlay 60 Pro (8+128GB, Android 14)
 - ALLDOCUBE iPlay 70 Pro (6+256GB, Android 14)
 - DOOGEE T30 Pro
@@ -45,7 +46,7 @@ https://x.com/alldocubejapan/status/2027050903644336530
 - ALLDOCUBE iPlay 50 mini NFE
 - ALLDOCUBE iPlay 60S (4+128GB)
 - ALLDOCUBE iPlay 60 mini (4+64GB)
-- ALLDOCUBE iPlay 60 mini Pro (8+128GB, Android 15)
+- ALLDOCUBE iPlay 60 mini Pro (8+128GB, Android 15) (Android 14)
 - ALLDOCUBE iPlay 60 mini Turbo (8+128GB)
 - ALLDOCUBE iPlay 60 Pad Pro (8+128GB/12+256GB)
 - ALLDOCUBE iPlay 60 Pro (8+128GB, Android 15)
@@ -103,6 +104,8 @@ https://x.com/wtnbgo/status/2026873880946815079
 https://x.com/mysalt_orenos/status/2026693593356972468
 https://x.com/boujinfuku/status/2026677387946283164
 https://x.com/alldocubejapan/status/2027050903644336530
+https://x.com/Morinpur1n/status/2027066046767931431
+https://x.com/mpW8fLPkK6FLkDP/status/2027171163366109568
 
 感染してるやつが全部同じところのOEMだったら(ry
 
