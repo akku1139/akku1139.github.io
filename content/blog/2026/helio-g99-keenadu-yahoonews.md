@@ -28,16 +28,18 @@ https://x.com/alldocubejapan/status/2027050903644336530
 ### おそらく感染しているデバイス
 
 - ALLDOCUBE iPlay 50 mini Pro (8+256GB/8+128GB, Android 13)
-- ALLDOCUBE iPlay 60 mini Pro (8+128GB, Android 14)
 - ALLDOCUBE iPlay 50 mini Pro NFE (Android 13)
-- ALLDOCUBE iPlay 60 mini Pro (8+256GB)
+- ALLDOCUBE iPlay 60 mini Pro (8+128GB, Android 14) (8+256GB)
 - ALLDOCUBE iPlay 60 Pro (8+128GB, Android 14)
 - ALLDOCUBE iPlay 70 Pro (6+256GB, Android 14)
 - DOOGEE T30 Pro
 - AvidPad A90
 - Hitabt G30A
 - Hitabt P30A
+- TECLAST T50 Pro (Android13)
 - TECLAST T60 Plus
+- TECLAST T65 Max
+- HEADWOLF FPad5 Pro
 - ALPHAWOLF APad2
 
 ### おそらく感染していないデバイス
@@ -46,7 +48,7 @@ https://x.com/alldocubejapan/status/2027050903644336530
 - ALLDOCUBE iPlay 50 mini NFE
 - ALLDOCUBE iPlay 60S (4+128GB)
 - ALLDOCUBE iPlay 60 mini (4+64GB)
-- ALLDOCUBE iPlay 60 mini Pro (8+128GB, Android 15) (Android 14)
+- ALLDOCUBE iPlay 60 mini Pro (8+128GB, Android 15) (Android 14?)
 - ALLDOCUBE iPlay 60 mini Turbo (8+128GB)
 - ALLDOCUBE iPlay 60 Pad Pro (8+128GB/12+256GB)
 - ALLDOCUBE iPlay 60 Pro (8+128GB, Android 15)
@@ -106,6 +108,10 @@ https://x.com/boujinfuku/status/2026677387946283164
 https://x.com/alldocubejapan/status/2027050903644336530
 https://x.com/Morinpur1n/status/2027066046767931431
 https://x.com/mpW8fLPkK6FLkDP/status/2027171163366109568
+https://mitanyan98.hatenablog.com/entry/2026/02/27/121822
+https://twitter.com/nukomode/status/2026946135764709868
+https://twitter.com/WataruNRT/status/2026860742650343909
+https://twitter.com/gyapin/status/2026665777684951459
 
 感染してるやつが全部同じところのOEMだったら(ry
 
