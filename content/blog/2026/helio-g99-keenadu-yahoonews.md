@@ -21,13 +21,17 @@ ALLDOCUBEは公式に調査することを宣言しています。
 https://x.com/AlldocubeJapan/status/2026626952736682199
 https://x.com/alldocube/status/2026612712365764903
 
+公式発表の続き
+
+https://x.com/alldocubejapan/status/2027050903644336530
+
 ### おそらく感染しているデバイス
 
-- ALLDOCUBE iPlay 50 mini Pro
-- ALLDOCUBE iPlay 60 mini Pro (Android 14?)
+- ALLDOCUBE iPlay 50 mini Pro (8+256GB/8+128GB, Android 13)
+- ALLDOCUBE iPlay 60 mini Pro (8+128GB, Android 14)
 - ALLDOCUBE iPlay 50 mini Pro NFE (Android 13)
-- ALLDOCUBE iPlay 60 Pro
-- ALLDOCUBE iPlay 70 Pro
+- ALLDOCUBE iPlay 60 Pro (8+128GB, Android 14)
+- ALLDOCUBE iPlay 70 Pro (6+256GB, Android 14)
 - DOOGEE T30 Pro
 - AvidPad A90
 - Hitabt G30A
@@ -37,12 +41,22 @@ https://x.com/alldocube/status/2026612712365764903
 
 ### おそらく感染していないデバイス
 
+- ALLDOCUBE iPlay 50 mini (4+128GB/4+64GB, Android 13)
 - ALLDOCUBE iPlay 50 mini NFE
-- ALLDOCUBE iPlay 60 mini Pro (Android 15)
-- ALLDOCUBE iPlay 60 mini Turbo
+- ALLDOCUBE iPlay 60S (4+128GB)
+- ALLDOCUBE iPlay 60 mini (4+64GB)
+- ALLDOCUBE iPlay 60 mini Pro (8+128GB, Android 15)
+- ALLDOCUBE iPlay 60 mini Turbo (8+128GB)
+- ALLDOCUBE iPlay 60 Pad Pro (8+128GB/12+256GB)
+- ALLDOCUBE iPlay 60 Pro (8+128GB, Android 15)
 - ALLDOCUBE iPlay 70 Max Pro
-- ALLDOCUBE iPlay 70E
-- ALLDOCUBE Ultra Pad
+- ALLDOCUBE iPlay 70 mini Ultra (12+256GB)
+- ALLDOCUBE iPlay 70 mini Pro (8+128GB/8+256GB)
+- ALLDOCUBE iPlay 70 Pro (6+256GB, Android 15)
+- ALLDOCUBE iPlay 70 (4+128GB)
+- ALLDOCUBE iPlay 70E (8+128GB)
+- ALLDOCUBE iPlay 70 Max Pro 5G (8+128GB)
+- ALLDOCUBE Ultra Pad (12+256GB)
 - HEADWOLF FPad5
 - HEADWOLF FPad7
 - HEADWOLF F6E
@@ -88,6 +102,7 @@ https://x.com/miniPCfunnel/status/2026925435158933579
 https://x.com/wtnbgo/status/2026873880946815079
 https://x.com/mysalt_orenos/status/2026693593356972468
 https://x.com/boujinfuku/status/2026677387946283164
+https://x.com/alldocubejapan/status/2027050903644336530
 
 感染してるやつが全部同じところのOEMだったら(ry
 
