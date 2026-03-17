@@ -34,6 +34,7 @@ invite | https://discord.gg/dyXV2zH4j5
 | [![banner](https://ynai20.vercel.app/banner.png) Yunai's website](https://ynai20.vercel.app/) | yunai | 2025-06-22 |
 | [![banner](https://imme.kotoca.net/banner.png) imme.kotoca.net](https://imme.kotoca.net/) | Povo(いんめ) | 2025-08-13 |
 | [![banner](https://cdn.sakana11.org/banner.jpg) techfish](https://techfish.dev/) | techfish | 2025-09-08 |
+| [![banner](https://m4gu.dev/magu.png) m4gu](https://m4gu.dev/) | まぐろ | 2026-03-17 |
 
 ### Banners
 
