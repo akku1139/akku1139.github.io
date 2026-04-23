@@ -133,6 +133,7 @@ canvas {
 
 <div class="preview-container">
   <p id="status">Select an image to start</p>
+  <img id="original" style="display: none;" />
   <canvas id="outputCanvas"></canvas>
 </div>
 
@@ -154,7 +155,7 @@ fileInput.addEventListener('change', (e) => {
 
   const reader = new FileReader();
   reader.onload = (event) => {
-    const img = document.createElement('img');
+    const img = document.getElementById('original');
     img.onload = () => {
       currentImage = img;
       statusText.innerText = `Source: ${img.width}x${img.height}`;
