@@ -1,0 +1,117 @@
+---
+title: Anime4K.js Image Upscaler
+summary: このアプリケーションはGemini 3 Flashによって生成されたコードが含まれます
+---
+
+<style>
+  /* body { font-family: sans-serif; max-width: 900px; margin: 20px auto; text-align: center; background: #f0f0f0; } */
+  .controls { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+  .preview-container { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  canvas { max-width: 100%; height: auto; background: #ddd; border: 1px solid #ccc; }
+  select, button { padding: 8px 12px; font-size: 14px; cursor: pointer; }
+</style>
+
+<div class="controls">
+  <input type="file" id="fileInput" accept="image/*">
+  
+  <label for="presetSelect">Preset:</label>
+  <select id="presetSelect">
+    <optgroup label="Simple">
+      <option value="ANIME4KJS_SIMPLE_S_2X">Simple S (2x)</option>
+      <option value="ANIME4KJS_SIMPLE_M_2X" selected>Simple M (2x)</option>
+      <option value="ANIME4KJS_SIMPLE_L_2X">Simple L (2x)</option>
+      <option value="ANIME4KJS_SIMPLE_VL_2X">Simple VL (2x)</option>
+      <option value="ANIME4KJS_SIMPLE_UL_2X">Simple UL (2x)</option>
+    </optgroup>
+    <optgroup label="Higher End">
+      <option value="ANIME4K_HIGHEREND_MODE_A">High-End Mode A</option>
+      <option value="ANIME4K_HIGHEREND_MODE_B">High-End Mode B</option>
+      <option value="ANIME4K_HIGHEREND_MODE_C">High-End Mode C</option>
+    </optgroup>
+  </select>
+
+  <button id="upscaleBtn">Upscale!</button>
+  <button id="downloadBtn" disabled>Download</button>
+</div>
+
+<div class="preview-container">
+  <p id="status">画像を選択してください</p>
+  <canvas id="outputCanvas"></canvas>
+</div>
+
+<script type="module">
+  import * as Anime4KJS from "https://cdn.jsdelivr.net/gh/akku1139/Anime4K.js@dist/anime4k.js";
+
+  const fileInput = document.getElementById('fileInput');
+  const presetSelect = document.getElementById('presetSelect');
+  const upscaleBtn = document.getElementById('upscaleBtn');
+  const downloadBtn = document.getElementById('downloadBtn');
+  const canvas = document.getElementById('outputCanvas');
+  const statusText = document.getElementById('status');
+
+  let currentImage = null;
+
+  // 画像選択時の処理
+  fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const img = new Image();
+      img.onload = () => {
+        currentImage = img;
+        statusText.innerText = `読み込み完了: ${img.width}x${img.height}`;
+        // 初期表示として一旦描画（任意）
+        drawOriginal(img);
+      };
+      img.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+
+  function drawOriginal(img) {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+  }
+
+  // アップスケール実行
+  upscaleBtn.addEventListener('click', async () => {
+    if (!currentImage) {
+      alert("先に画像を選択してください");
+      return;
+    }
+
+    statusText.innerText = "処理中...";
+    
+    try {
+      // 選択されたプリセットを取得
+      const presetName = presetSelect.value;
+      const profile = Anime4KJS[presetName];
+
+      // ImageUpscaler インスタンス化
+      // 第1引数はプロフィール（シェーダー配列）
+      const upscaler = new Anime4KJS.ImageUpscaler(profile);
+
+      // 画像をアタッチしてアップスケール
+      // 第1引数: Imageオブジェクト, 第2引数: 出力先Canvas
+      await upscaler.upscale(currentImage, canvas);
+
+      statusText.innerText = `完了: ${canvas.width}x${canvas.height} (Preset: ${presetName})`;
+      downloadBtn.disabled = false;
+    } catch (err) {
+      console.error(err);
+      statusText.innerText = "エラーが発生しました。詳細はコンソールを確認してください。";
+    }
+  });
+
+  // ダウンロード処理
+  downloadBtn.addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.download = 'upscaled_image.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+</script>
