@@ -181,15 +181,9 @@ upscaleBtn.addEventListener('click', async () => {
   try {
     const presetName = presetSelect.value;
     const profile = Anime4KJS[presetName];
-
-    // ImageUpscaler インスタンス作成
     const upscaler = new Anime4KJS.ImageUpscaler(profile);
-    
-    // ソースの紐付け (img要素, 出力先canvas)
     upscaler.attachSource(currentImage, canvas);
-    
-    // アップスケール実行
-    await upscaler.upscale();
+    upscaler.upscale();
 
     statusText.innerText = `Upscaled: ${canvas.width}x${canvas.height} (${presetName})`;
     downloadBtn.disabled = false;
