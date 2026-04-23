@@ -146,7 +146,7 @@ const upscaleBtn = document.getElementById('upscaleBtn');
 const downloadBtn = document.getElementById('downloadBtn');
 const canvas = document.getElementById('outputCanvas');
 const statusText = document.getElementById('status');
-
+const img = document.getElementById('original');
 let currentImage = null;
 
 fileInput.addEventListener('change', (e) => {
@@ -155,7 +155,6 @@ fileInput.addEventListener('change', (e) => {
 
   const reader = new FileReader();
   reader.onload = (event) => {
-    const img = document.getElementById('original');
     img.onload = () => {
       currentImage = img;
       statusText.innerText = `Source: ${img.width}x${img.height}`;
@@ -183,6 +182,7 @@ upscaleBtn.addEventListener('click', async () => {
     const profile = Anime4KJS[presetName];
     const upscaler = new Anime4KJS.ImageUpscaler(profile);
     upscaler.attachSource(currentImage, canvas);
+    canvas.width = canvas.width;
     upscaler.upscale();
 
     statusText.innerText = `Upscaled: ${canvas.width}x${canvas.height} (${presetName})`;
