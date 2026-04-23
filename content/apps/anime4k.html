@@ -134,7 +134,7 @@ canvas {
 <div class="preview-container">
   <p id="status">Select an image to start</p>
   <img id="original" style="display: none;" />
-  <canvas id="outputCanvas"></canvas>
+  <canvas id="outputCanvas" style="display: none;"></canvas>
 </div>
 
 <script type="module">
@@ -157,12 +157,9 @@ fileInput.addEventListener('change', (e) => {
   reader.onload = (event) => {
     img.onload = () => {
       currentImage = img;
+      img.style.display = "block";
+      canvas.style.display = "none";
       statusText.innerText = `Source: ${img.width}x${img.height}`;
-      // Preview original on canvas
-      canvas.width = img.width;
-      canvas.height = img.height;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0);
     };
     img.src = event.target.result;
   };
@@ -181,9 +178,10 @@ upscaleBtn.addEventListener('click', async () => {
     const presetName = presetSelect.value;
     const profile = Anime4KJS[presetName];
     const upscaler = new Anime4KJS.ImageUpscaler(profile);
-    canvas.width = canvas.width; // must reset canvas
     upscaler.attachSource(currentImage, canvas);
     upscaler.upscale();
+    canvas.style.display = "block";
+    img.style.display = "none";
 
     statusText.innerText = `Upscaled: ${canvas.width}x${canvas.height} (${presetName})`;
     downloadBtn.disabled = false;
