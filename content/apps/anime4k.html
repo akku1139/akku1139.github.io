@@ -181,8 +181,8 @@ upscaleBtn.addEventListener('click', async () => {
     const presetName = presetSelect.value;
     const profile = Anime4KJS[presetName];
     const upscaler = new Anime4KJS.ImageUpscaler(profile);
+    canvas.width = canvas.width; // must reset canvas
     upscaler.attachSource(currentImage, canvas);
-    canvas.width = canvas.width;
     upscaler.upscale();
 
     statusText.innerText = `Upscaled: ${canvas.width}x${canvas.height} (${presetName})`;
