@@ -4,182 +4,204 @@ summary: このアプリケーションはGemini 3 Flashによって生成され
 ---
 
 <style>
-  /* 既存のCSSと調和させる追加スタイル */
-  .controls {
-    background-color: #252525;
-    padding: 20px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    border: 1px solid #3e4451;
-  }
+/* Base Style */
+body {
+  font-family: Verdana,sans-serif;
+  margin: auto;
+  padding: 20px;
+  max-width: 720px;
+  text-align: left;
+  background-color: #1d1f27;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  color: #c9d1d9
+}
 
-  .control-group {
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-  }
+h1,h2,h3,h4,h5,h6,strong,b {
+  color: #eee
+}
 
-  /* 入力要素のスタイル調整 */
-  select, input[type="file"] {
-    background-color: #2d2d2d;
-    color: #ddd;
-    border: 1px solid #444;
-    padding: 6px;
-    font-family: inherit;
-    font-size: 14px;
-  }
+a {
+  color: #8cc2dd
+}
 
-  /* ボタンのスタイル */
-  button {
-    background-color: #8cc2dd;
-    color: #1d1f27;
-    border: none;
-    padding: 8px 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: opacity 0.2s;
-  }
+input {
+  background-color: #252525;
+  color: #ddd;
+  font-size: 16px
+}
 
-  button:hover {
-    opacity: 0.8;
-  }
+img {
+  max-width: 100%;
+  height: auto
+}
 
-  button:disabled {
-    background-color: #444;
-    color: #888;
-    cursor: not-allowed;
-  }
+/* App Custom Style */
+.controls {
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #3e4451;
+}
 
-  /* プレビューエリア */
-  .preview-container {
-    margin-top: 20px;
-    text-align: center;
-  }
+.control-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
 
-  #status {
-    color: #aaa;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
+select {
+  background-color: #2d2d2d;
+  color: #ddd;
+  border: 1px solid #444;
+  padding: 6px;
+  font-family: inherit;
+  font-size: 14px;
+}
 
-  canvas {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #c9d1d9;
-    background-color: #000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  }
+button {
+  background-color: #8cc2dd;
+  color: #1d1f27;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: opacity 0.2s;
+}
 
-  label {
-    font-size: 14px;
-    color: #eee;
-  }
+button:hover {
+  opacity: 0.8;
+}
+
+button:disabled {
+  background-color: #444;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.preview-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#status {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #c9d1d9;
+  background-color: #000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
 </style>
 
 <div class="controls">
-  <input type="file" id="fileInput" accept="image/*">
+  <div class="control-group">
+    <input type="file" id="fileInput" accept="image/*">
+  </div>
   
-  <label for="presetSelect">Preset:</label>
-  <select id="presetSelect">
-    <optgroup label="Simple">
-      <option value="ANIME4KJS_SIMPLE_S_2X">Simple S (2x)</option>
-      <option value="ANIME4KJS_SIMPLE_M_2X" selected>Simple M (2x)</option>
-      <option value="ANIME4KJS_SIMPLE_L_2X">Simple L (2x)</option>
-      <option value="ANIME4KJS_SIMPLE_VL_2X">Simple VL (2x)</option>
-      <option value="ANIME4KJS_SIMPLE_UL_2X">Simple UL (2x)</option>
-    </optgroup>
-    <optgroup label="Higher End">
-      <option value="ANIME4K_HIGHEREND_MODE_A">High-End Mode A</option>
-      <option value="ANIME4K_HIGHEREND_MODE_B">High-End Mode B</option>
-      <option value="ANIME4K_HIGHEREND_MODE_C">High-End Mode C</option>
-    </optgroup>
-  </select>
+  <div class="control-group">
+    <label for="presetSelect">Preset:</label>
+    <select id="presetSelect">
+      <optgroup label="Simple">
+        <option value="ANIME4KJS_SIMPLE_S_2X">Simple S (2x)</option>
+        <option value="ANIME4KJS_SIMPLE_M_2X" selected>Simple M (2x)</option>
+        <option value="ANIME4KJS_SIMPLE_L_2X">Simple L (2x)</option>
+        <option value="ANIME4KJS_SIMPLE_VL_2X">Simple VL (2x)</option>
+        <option value="ANIME4KJS_SIMPLE_UL_2X">Simple UL (2x)</option>
+      </optgroup>
+      <optgroup label="Higher End">
+        <option value="ANIME4K_HIGHEREND_MODE_A">High-End Mode A</option>
+        <option value="ANIME4K_HIGHEREND_MODE_B">High-End Mode B</option>
+        <option value="ANIME4K_HIGHEREND_MODE_C">High-End Mode C</option>
+      </optgroup>
+    </select>
+  </div>
 
-  <button id="upscaleBtn">Upscale!</button>
-  <button id="downloadBtn" disabled>Download</button>
+  <button id="upscaleBtn">Upscale</button>
+  <button id="downloadBtn" disabled style="background-color: #eee;">Download</button>
 </div>
 
 <div class="preview-container">
-  <p id="status">画像を選択してください</p>
+  <p id="status">Select an image to start</p>
   <canvas id="outputCanvas"></canvas>
 </div>
 
 <script type="module">
-  import * as Anime4KJS from "https://cdn.jsdelivr.net/gh/akku1139/Anime4K.js@dist/anime4k.js";
+import * as Anime4KJS from "https://cdn.jsdelivr.net/gh/akku1139/Anime4K.js@dist/anime4k.js";
 
-  const fileInput = document.getElementById('fileInput');
-  const presetSelect = document.getElementById('presetSelect');
-  const upscaleBtn = document.getElementById('upscaleBtn');
-  const downloadBtn = document.getElementById('downloadBtn');
-  const canvas = document.getElementById('outputCanvas');
-  const statusText = document.getElementById('status');
+const fileInput = document.getElementById('fileInput');
+const presetSelect = document.getElementById('presetSelect');
+const upscaleBtn = document.getElementById('upscaleBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const canvas = document.getElementById('outputCanvas');
+const statusText = document.getElementById('status');
 
-  let currentImage = null;
+let currentImage = null;
 
-  // 画像選択時の処理
-  fileInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
+fileInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const img = new Image();
-      img.onload = () => {
-        currentImage = img;
-        statusText.innerText = `読み込み完了: ${img.width}x${img.height}`;
-        // 初期表示として一旦描画（任意）
-        drawOriginal(img);
-      };
-      img.src = event.target.result;
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    const img = document.createElement('img');
+    img.onload = () => {
+      currentImage = img;
+      statusText.innerText = `Source: ${img.width}x${img.height}`;
+      // Preview original on canvas
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
     };
-    reader.readAsDataURL(file);
-  });
+    img.src = event.target.result;
+  };
+  reader.readAsDataURL(file);
+});
 
-  function drawOriginal(img) {
-    canvas.width = img.width;
-    canvas.height = img.height;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0);
+upscaleBtn.addEventListener('click', async () => {
+  if (!currentImage) {
+    alert("Please select an image.");
+    return;
   }
 
-  // アップスケール実行
-  upscaleBtn.addEventListener('click', async () => {
-    if (!currentImage) {
-      alert("先に画像を選択してください");
-      return;
-    }
+  statusText.innerText = "Processing...";
+  
+  try {
+    const presetName = presetSelect.value;
+    const profile = Anime4KJS[presetName];
 
-    statusText.innerText = "処理中...";
+    // ImageUpscaler インスタンス作成
+    const upscaler = new Anime4KJS.ImageUpscaler(profile);
     
-    try {
-      // 選択されたプリセットを取得
-      const presetName = presetSelect.value;
-      const profile = Anime4KJS[presetName];
+    // ソースの紐付け (img要素, 出力先canvas)
+    upscaler.attachSource(currentImage, canvas);
+    
+    // アップスケール実行
+    await upscaler.upscale();
 
-      // ImageUpscaler インスタンス化
-      // 第1引数はプロフィール（シェーダー配列）
-      const upscaler = new Anime4KJS.ImageUpscaler(profile);
+    statusText.innerText = `Upscaled: ${canvas.width}x${canvas.height} (${presetName})`;
+    downloadBtn.disabled = false;
+  } catch (err) {
+    console.error(err);
+    statusText.innerText = "Error occurred during upscaling.";
+  }
+});
 
-      // 画像をアタッチしてアップスケール
-      // 第1引数: Imageオブジェクト, 第2引数: 出力先Canvas
-      await upscaler.upscale(currentImage, canvas);
-
-      statusText.innerText = `完了: ${canvas.width}x${canvas.height} (Preset: ${presetName})`;
-      downloadBtn.disabled = false;
-    } catch (err) {
-      console.error(err);
-      statusText.innerText = "エラーが発生しました。詳細はコンソールを確認してください。";
-    }
-  });
-
-  // ダウンロード処理
-  downloadBtn.addEventListener('click', () => {
-    const link = document.createElement('a');
-    link.download = 'upscaled_image.png';
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-  });
+downloadBtn.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.download = `upscaled_${Date.now()}.png`;
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+});
 </script>
