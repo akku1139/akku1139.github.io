@@ -67,6 +67,10 @@ Vex Standard
 
 [←](https://musubink.fyi/akku/previous)[Musubink](https://musubink.fyi/akku/random)[→](https://musubink.fyi/akku/next) ([home page](https://musubink.fyi/))
 
+## Free Speech Flag
+
+![Free Speech Flag](https://upload.wikimedia.org/wikipedia/commons/f/fd/Sample_09-F9_protest_art%2C_Free_Speech_Flag_by_John_Marcotte.svg)
+
 ## Donate
 
 | Coin | Address |
