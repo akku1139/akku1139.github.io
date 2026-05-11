@@ -4,7 +4,7 @@ date: 2025-09-13
 tags: ["PC", "レビュー", "オーディオ"]
 ---
 
-[サンワサプライ MM-SPU7BK](./sanwa-mm-spu7bk-review/)についで、2つ目のPCスピーカーです。
+[サンワサプライ MM-SPU7BK](/blog/sanwa-mm-spu7bk-review/)についで、2つ目のPCスピーカーです。
 
 ハードオフのジャンクで前と同じく1100円でした。
 
